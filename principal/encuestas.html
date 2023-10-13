@@ -4,37 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="encuestas.css">
-    <title>Encuestas de Finanzas</title>
+    <title>Cuestionario de Finanzas</title>
 </head>
 <body>
+    
     <div class="container">
         <button class="wallet-button">Ir a la Cartera</button>
         <div class="user-container">
             <h2>Bienvenido, Nombre de Usuario</h2>
-            <img src="user-icon.png" alt="Ícono de Usuario">
-            <h3>Encuestas de Finanzas</h3>
-            <div class="question">
-                <p>1. ¿Cuál es la criptomoneda más antigua?</p>
-                <input type="text">
-            </div>
-            <div class="question">
-                <p>2. ¿Qué es un monedero (wallet) de criptomonedas?</p>
-                <input type="text">
-            </div>
-            <div class="question">
-                <p>3. ¿Qué significa el término "blockchain" en el contexto de las criptomonedas?</p>
-                <input type="text">
-            </div>
-            <div class="question">
-                <p>4. ¿Cuál es la diferencia entre Bitcoin y Ethereum?</p>
-                <input type="text">
-            </div>
-            <div class="question">
-                <p>5. ¿Qué es la minería de criptomonedas y cómo funciona?</p>
-                <input type="text">
-            </div>
+            <img src="images/usuario.png" alt="Ícono de Usuario" style="max-width: 100px;">
+            <h3>Cuestionario de Finanzas</h3>
+            <form id="quiz-form">
+                <div class="question" id="question1">
+                    <p>1. ¿Cuál es la criptomoneda más antigua?</p>
+                    <label>
+                        <input type="radio" name="q1" value="a"> a) Bitcoin
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="b"> b) Ethereum
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="c"> c) Ripple
+                    </label>
+                </div>
+                <div class="question" id="question2" style="display: none;">
+                    <p>2. ¿Qué es un monedero (wallet) de criptomonedas?</p>
+                    <label>
+                        <input type="radio" name="q2" value="a"> a) Un servicio de intercambio de criptomonedas
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="b"> b) Un programa que almacena criptomonedas
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="c"> c) Un banco tradicional
+                    </label>     
+                </div>
+                <!-- Agrega las demás preguntas de la misma manera -->
+                <div class="question" id="question3" style="display: none;">
+                    <p>3. ¿Cuál es la minería de criptomonedas y cómo funciona?</p>
+                    <label>
+                        <input type="radio" name="q3" value="a"> a) Proceso para crear criptomonedas
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="b"> b) Compra de criptomonedas en un exchange
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="c"> c) Protección de billetera criptográfica
+                    </label>
+                </div>
+                <div class="question" id="question4" style="display: none;">
+                    <p>4. ¿Sabes que Solana?</p>
+                    <label>
+                        <input type="radio" name="q4" value="a"> a) Si
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="b"> b) No
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="c"> c) Mas o menos
+                    </label>
+                </div>
+                <div class="question" id="question5" style="display: none;">
+                    <p>5. ¿Sabes el valor de una Criptomoneda?</p>
+                    <label>
+                        <input type="radio" name="q5" value="a"> a) Muy alto su valor
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="b"> b) Muy bajo su valor
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="c"> c) Valor promedio
+                    </label>
+                </div>
+                <button type="button" id="next-button" onclick="showNextQuestion()">Siguiente</button>
+                <button type="button" id="finish-button" style="display: none;">Finalizar</button>
+            </form>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        let currentQuestion = 1;
+
+        function showNextQuestion() {
+            document.getElementById(`question${currentQuestion}`).style.display = "none";
+            currentQuestion++;
+            if (currentQuestion <= 5) {
+                document.getElementById(`question${currentQuestion}`).style.display = "block";
+            }
+            if (currentQuestion === 5) {
+                document.getElementById("next-button").style.display = "none";
+                document.getElementById("finish-button").style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
