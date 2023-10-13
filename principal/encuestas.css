@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: url("images/crip.jpeg") no-repeat center top right;
+    background: url("images/logo.jpeg") no-repeat center top right;
     background-size: contain;
     background-color: #f0f0f0;
     margin: 0;
@@ -11,7 +11,6 @@ body {
     height: 100vh;
     position: relative;
 }
-
 
 .container {
     width: 100%;
@@ -38,4 +37,17 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     flex-grow: 1;
     padding: 20px;
+}
+
+/* Estilo para las preguntas y respuestas */
+.question {
+    margin-bottom: 20px; /* Agrega un margen entre las preguntas */
+}
+
+.question label {
+    display: block; /* Hace que cada respuesta esté en una línea separada */
+    background-color: #D0FFD0; /* Cambia el color de fondo de las respuestas a verde claro */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px; /* Espacio entre respuestas */
 }
