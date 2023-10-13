@@ -21,10 +21,18 @@ const getBalances = async (publicKey) => {
         const balancenew = balance / LAMPORTS_PER_SOL;
         balance = balancenew;
         console.log(balance);
+        updateBalanceElement(balance);
     } catch (error) {
         console.error("ERROR GET BALANCE", error);
         toast.error("Something went wrong getting the balance");
     }
+};
+
+getBalances(publicKey); 
+
+const updateBalanceElement = (newBalance) => {
+    const balanceElement = document.getElementById("balance");
+    balanceElement.textContent = `${newBalance}`; // Cambiar el texto con el nuevo saldo
 };
 
 // Evento para el cambio del destinatario
@@ -33,11 +41,19 @@ const handleReceiverChange = (event) => {
     console.log(receiver);
 };
 
+document.getElementById("receiver").addEventListener("input", (event) => {
+    handleReceiverChange(event);
+});
+
 // Evento para el cambio de la cantidad de SOL
 const handleAmountChange = (event) => {
     amount = event.target.value;
     console.log(amount);
 };
+
+document.getElementById("amount").addEventListener("input", (event) => {
+    handleAmountChange(event);
+});
 
 // Evento para el envío de transacción
 const handleSubmit = async () => {
@@ -45,6 +61,8 @@ const handleSubmit = async () => {
     console.log("Este es el monto", amount);
     sendTransaction();
 };
+
+document.getElementById("button_send").addEventListener("click", handleSubmit);
 
 const sendTransaction = async () => {
     try {
