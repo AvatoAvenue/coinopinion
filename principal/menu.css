@@ -80,3 +80,20 @@ nav ul li a:hover {
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+
+.seleccionar-encuesta-button {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.seleccionar-encuesta-button:hover {
+    background-color: #258cd1;
+    transform: scale(2);
+}
