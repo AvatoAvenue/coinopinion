@@ -138,3 +138,22 @@ nav ul li a {
     display: inline-block; /* Hace que el botón "Regresar" esté en la misma línea que "Siguiente" */
     float: right; /* Alinea "Regresar" a la derecha */
 }
+ /* Estilos personalizados para la barra de progreso */
+ .progress-container {
+    width: 100%;
+    background-color: #ccc;
+    height: 20px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #4CAF50;
+}
+
+/* Estilos para el nombre "Coin-Opinion" */
+.coin-opinion-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
