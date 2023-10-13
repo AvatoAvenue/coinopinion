@@ -18,7 +18,7 @@ document.getElementById("agregarTarjeta").addEventListener("click", function () 
           </div>
           <div class="visa_info">
               <img src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/chip.png" alt="">
-              <p>**** **** **** 6388</p>
+              <p>**** **** **** 6344</p> 
           </div>
       </div>
   </div>
