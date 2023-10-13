@@ -270,3 +270,31 @@ ul li a:hover{
 .icons ion-icon:hover{
     color: #0f6324;
 }
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #100101;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 2;
+    color: #f6efef
+  }
+  .popup p {
+    font-size: 18px; /* Modify the font size */
+    color: #333;    /* Modify the text color */
+  }
+  .closePopup {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }

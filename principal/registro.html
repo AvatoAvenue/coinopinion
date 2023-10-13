@@ -29,7 +29,7 @@
     </style>
 </head>
 <body>
-
+    
     <div class="main">
         <div class="navbar">
             <div class="icon">
@@ -42,8 +42,14 @@
                     <li><a href="#">Nosotros</a></li>
                     <li><a href="#">Servicio</a></li>
                     <li><a href="grafica.html">Balance</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#Contacto" id="openPopup">Contacto</a></li>
                 </ul>
+                <div id="popup" class="popup">
+                    <h2>Contacto</h2>
+                    <p><a href="https://twitter.com/coinopinion_">Twitter</a></p>
+                    <button id="closePopup" class="closePopup">Close</button>
+                  </div>
+                  
             </div>
 
             <div class="search">
@@ -81,5 +87,8 @@
         </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="registro.js"></script>
+    
 </body>
+
 </html>
