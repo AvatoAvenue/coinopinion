@@ -3,12 +3,23 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Cambia la dirección del flujo del contenido a columna */
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: flex-start; /* Alinea el contenido en la parte superior */
-    height: 100vh;
     background: url("logo.jpeg") no-repeat center top right;
     background-size: contain;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
 }
 
 .wallet-button {
@@ -16,7 +27,16 @@ body {
     color: #fff;
     border: none;
     padding: 10px 20px;
-    cursor: right;
     border-radius: 5px;
-    margin: 10px; /* Agrega un margen para separar el botón de la parte superior */
+    margin-top: 10px;
 }
+
+.user-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Resto de tu estilo CSS... */
