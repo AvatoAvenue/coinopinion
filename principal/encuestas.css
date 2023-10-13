@@ -3,7 +3,7 @@ body {
     background: url("images/fondogreen.jpg") no-repeat top;
     background-size: contain;
     background-color: #f0f0f0;
-    margin: 25;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -20,6 +20,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .wallet-button {
@@ -41,13 +42,45 @@ body {
 
 /* Estilo para las preguntas y respuestas */
 .question {
-    margin-bottom: 20px; /* Agrega un margen entre las preguntas */
+    margin-bottom: 20px;
 }
 
 .question label {
-    display: block; /* Hace que cada respuesta esté en una línea separada */
-    background-color: #D0FFD0; /* Cambia el color de fondo de las respuestas a verde claro */
+    display: block;
+    background-color: #D0FFD0;
     padding: 10px;
     border-radius: 5px;
-    margin-top: 5px; /* Espacio entre respuestas */
+    margin-top: 5px;
+}
+/* Estilo para los botones */
+.quiz-button {
+    background-color: #888;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px; /* Agrega un margen derecho */
+    font-weight: bold; /* Hace que el texto sea en negritas */
+}
+
+/* Estilo específico para el botón "Siguiente" */
+#next-button {
+    background-color: #12A088; /* Cambia el color del botón "Siguiente" */
+}
+
+#next-button:hover {
+    background-color: #0E7A65; /* Cambia el color al pasar el mouse sobre "Siguiente" */
+}
+
+#prev-button {
+    display: inline-block; /* Hace que el botón "Regresar" esté en la misma línea que "Siguiente" */
+    float: right; /* Alinea "Regresar" a la derecha */
+}
+
+
+
+.quiz-button:hover {
+    background-color: #aaa; /* Cambio de color al pasar el mouse */
+    cursor: pointer;
 }
