@@ -15,6 +15,7 @@
     }
     .header
     {
+        user-select: none;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -82,24 +83,34 @@
     .header #Menu:hover {
         background-color: #0C7A68;
     }
-    h1 
+
+    .saldocontainer
     {
+        user-select: none;
+        display: flex;
         justify-content: center;
-        color:#ffff
-    }
-    h2
-    {
-        justify-content: right;
-        color:#ffff
+        outline: none;
+        width: 30%;
+        height: 100px;
+        border: 5px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
     }
     #saldo {
+        display: flex;
+        align-items: top;
+        margin-top: 2%;
         font-size: 24px;
         color: #ffff;
         font-weight: bold;
     }
-    #historial {
+
+    #tarjetas h2
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: #ffff;
-        margin-top: 20px;
     }
     .tarjeta_container
     {
@@ -115,7 +126,7 @@
         }        
         .tarjeta:hover { 
             outline: none;
-            height: 200px;
+            height: 240px;
             border-color: #ffff;
         }
           .card {
@@ -159,4 +170,32 @@
             padding: 10px 0;
             letter-spacing: 2px;
             color: #ffffff;
+          }
+
+          #historial {
+            color: #ffff;
+            margin-top: 20px;
+        }
+          .movimientocontainer
+          {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #0C7A68;
+            border: 2px solid #0C7A68;
+            padding: 10px;
+          }
+          .movimientocontainer p
+          {
+            align-items: center;
+            border-bottom: 2px dotted #ffff;
+            padding-bottom: 3%;
+          }
+          .movimientocontainer p:last-child {
+            border-bottom: none;
+          }
+
+          hr.rounded {
+            border-top: 6px solid #0C7A68;
+            border-radius: 5px;
           }
