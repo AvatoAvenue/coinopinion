@@ -3,15 +3,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ccc; /* Fondo gris */
-    color: #fff; /* Texto blanco */
-    /*FONDO*/
-    font-family: Arial, sans-serif;
-    margin: 0;
     background: url("images/fondogreen.jpg") no-repeat top;
     background-size: cover;
-    background-color: rgba(240, 240, 240, 0.9); /* Fondo semi-transparente */
-    color: #333; /* Cambia el color de texto según tus preferencias */
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo negro semi-transparente */
+    color: #fff; /* Texto blanco */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -21,16 +16,17 @@ body {
 }
 
 .container {
-    margin: 20px; /* Agregar margen alrededor del contenido */
-    border: 1px solid #ccc; /* Agregar un contorno alrededor del contenido */
+    margin: 20px;
+    border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
-    background-color: #fff; /* Fondo blanco */
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
 }
 
 header {
-    background-color: #000; /* Fondo negro */
-    color: #4caf50; /* Texto verde para el encabezado */
+    background-color: #000;
+    color: #4caf50;
     text-align: center;
     padding: 20px 0;
 }
@@ -47,57 +43,44 @@ header {
 
 h1 {
     font-size: 36px;
+    color: #4caf50; /* Título en verde */
 }
 
 section {
-    background-color: #fff;
-    color: #000; /* Texto negro para el contenido */
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Agregar margen inferior entre secciones */
+    margin-bottom: 20px;
 }
 
 h2 {
     font-size: 24px;
+    color: #4caf50; /* Título en verde */
     margin-top: 0;
+}
+
+p {
+    color: #fff; /* Texto blanco */
 }
 
 a {
     display: block;
     width: 150px;
-    margin: 20px auto; /* Centrar el botón y agregar separación */
+    margin: 20px auto;
     padding: 10px 20px;
-    background-color: #4caf50; /* Verde para botones y enlaces */
+    background-color: #4caf50;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
 }
 
 a:hover {
-    background-color: #f75a00; /* Cambio de color al pasar el cursor por encima */
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
+    background-color: #f75a00;
 }
 
 /* Estilos para el carrusel de imágenes */
 .image-slider {
     text-align: center; /* Centrar las imágenes horizontalmente */
-}
-
-/* Estilos para las flechas de navegación */
-.slick-prev,
-.slick-next {
-    font-size: 24px;
-    color: #4caf50; /* Color verde para las flechas */
-}
-
-.slick-prev:hover,
-.slick-next:hover {
-    color: #f75a00; /* Cambio de color al pasar el cursor por encima */
 }
