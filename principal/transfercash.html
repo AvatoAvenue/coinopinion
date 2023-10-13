@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="transfercash.css">
     <title>Transferencia</title>
-    <body>
 </head>
 
 <div class="header">
@@ -13,5 +12,35 @@
     <h1>Transferencia</h1>
     <button id="Menu">Inicio</button>
   </div>
+<body>
+    <div class="saldocontainer">
+        <div id="saldo">
+            Saldo de soles actual
+        </div>
+        <p id="amount_actual"></p>
+    </div>
+    <div class="Destino">
+        <p>Destinatario:</p>
+        <input
+            type="text"
+            id="receiver"
+            onchange="handleReceiverChange(this)"
+        />
+    </div>
+    <div class="Cantidad">
+        <p>Cantidad de sol:</p>
+        <input
+            type="number"
+            id="quantity_sol"
+            onchange="handleAmountChange(this)"
+        />
+    </div>
 
+    <button
+        id="button_send"
+        onclick="handleSubmit()"
+    >Enviar</button>
+    
+</body>
   <script src="transfercash.js"></script>
+
