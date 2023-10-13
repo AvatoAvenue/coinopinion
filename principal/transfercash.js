@@ -15,8 +15,8 @@ const Home = () => {
     const [publicKey, setPublicKey] = useState(null);
     const router = useRouter();
     const [balance, setBalance] = useState(0);
-    const [receiver, setReceiver] = useState(null);
-    const [amount, setAmount] = useState(null);
+    const [receiverValue, setReceiver] = useState(null);
+    const [amountValue, setAmount] = useState(null);
     const [explorerLink, setExplorerLink] = useState(null);
 
     const [url, setUrl] = useState(null);
@@ -37,8 +37,8 @@ const Home = () => {
     };
 
     const handleSubmit = async () => {
-        console.log("Este es el receptor", receiver);
-        console.log("Este es el monto", amount);
+        console.log("Este es el receptor", receiverValue);
+        console.log("Este es el monto", amountValue);
         sendTransaction();
     };
 
@@ -46,9 +46,6 @@ const Home = () => {
         setUrl(event.target.value);
         console.log("Si se esta seteando la URL", url);
     };
-
-let receiverValue; // Declarar la variable receiverValue
-let amountValue;  // Declarar la variable amountValue
 
 // Función para volver atrás
 document.getElementById("Menu").addEventListener("click", function () {
@@ -112,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Este es el balance", balance);
     
                 //Si el balance es menor al monto a enviar
-                if (balance < amount) {
+                if (balance < amountValue) {
                     toast.error("No tienes suficiente balance");
                     return;
                 }
@@ -126,14 +123,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 //Llaves
     
                 const fromPubkey = new PublicKey(publicKey);
-                const toPubkey = new PublicKey(receiver);
+                const toPubkey = new PublicKey(receiverValue);
     
                 //Creamos la transaccion
                 const transaction = new Transaction().add(
                     SystemProgram.transfer({
                         fromPubkey,
                         toPubkey,
-                        lamports: amount * LAMPORTS_PER_SOL,
+                        lamports: amountValue * LAMPORTS_PER_SOL,
                     })
                 );
                 console.log("Esta es la transaccion", transaction);
