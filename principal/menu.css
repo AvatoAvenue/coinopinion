@@ -1,8 +1,67 @@
-/* Estilos para el menú de navegación con fondo */
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Fondo negro para la pantalla principal */
+    color: #4caf50; /* Color de texto verde */
+}
+
+/* Estilos para el encabezado */
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.header img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px; /* Espacio entre la imagen y el contenido */
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.profile-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px; /* Espacio entre el contenido y el botón de perfil */
+}
+
+.profile-button img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.profile-button:hover .dropdown-menu {
+    display: block;
+}
+
+/* Estilos para el menú de navegación */
 nav {
-    background-color: #12A088;
-    background-image: url('images/fondogreen.jpg'); /* Ruta de tu imagen de fondo */
-    background-size: cover;
+    background-color: #333;
     color: #fff;
     padding: 10px;
 }
@@ -24,70 +83,12 @@ nav ul li a {
     padding: 5px;
 }
 
-/* Estilos para el botón de la billetera */
-.wallet-button {
-    background-color: #12A088;
-    border: none;
-    color: #fff;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.wallet-button:hover {
-    background-color: #0C7A68;
-    color: #fff;
-}
-
-/* Estilos para el menú desplegable del perfil */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: -10;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    padding: 20px;
-    display: none;
-}
-
-.dropdown-menu a {
-    position: relative;
-    display: inline-block;
-    margin-left: -20px;
-}
-
-.dropdown-menu a:hover {
-    background-color: #f2f2f2;
-}
-
-.dropdown input[type="checkbox"]:checked + .dropdown-menu {
-    display: block;
-}
-
-/* Additional styles */
-nav ul li:hover {
-    background-color: #0C7A68;
-}
-
-nav ul li a:hover {
-    color: #fff;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
+/* Estilos para los botones de selección de encuesta */
 .seleccionar-encuesta-button {
     display: block;
     width: 100%;
     padding: 20px;
-    background-color: #12A088;
+    background-color: #3498db;
     color: #fff;
     font-size: 18px;
     border: none;
@@ -96,6 +97,52 @@ nav ul li a:hover {
 }
 
 .seleccionar-encuesta-button:hover {
-    background-color: #0C7A68;
-    transform: scale(2);
+    background-color: #f75a00;
+    transform: scale(1.1); /* Cambié el valor para reducir la escala */
+}
+/* Estilos CSS */
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.header img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.profile-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-button img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.profile-button:hover .dropdown-menu {
+    display: block;
 }
