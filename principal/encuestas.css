@@ -1,21 +1,29 @@
-body {
-    /* Estilos para el nombre "Coin-Opinion" */
-  .coin-opinion-header {
-    text-align: left;
-    font-size: 24px;
-    margin-bottom: 20px;
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
     font-family: Arial, sans-serif;
+    margin: 0;
     background: url("images/fondogreen.jpg") no-repeat top;
     background-size: cover;
     background-color: rgba(240, 240, 240, 0.9); /* Fondo semi-transparente */
-    margin: 0;
+    color: #333; /* Cambia el color de texto según tus preferencias */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 200vh;
+    height: 100vh;
     position: relative;
+}
+
+.coin-opinion-header {
+    text-align: left;
+    font-size: 24px;
+    margin: 20px 0;
 }
 
 .header {
@@ -29,6 +37,7 @@ body {
 
 .header .logo h1 {
     margin: 0;
+    color: #0f6324; /* Cambia el color del texto según tus preferencias */
 }
 
 .wallet-button {
@@ -37,8 +46,8 @@ body {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    margin-top: 10px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .user-profile .dropdown {
@@ -144,8 +153,9 @@ nav ul li a {
     display: inline-block; /* Hace que el botón "Regresar" esté en la misma línea que "Siguiente" */
     float: right; /* Alinea "Regresar" a la derecha */
 }
- /* Estilos personalizados para la barra de progreso */
- .progress-container {
+
+/* Estilos personalizados para la barra de progreso */
+.progress-container {
     width: 100%;
     background-color: #ccc;
     height: 20px;

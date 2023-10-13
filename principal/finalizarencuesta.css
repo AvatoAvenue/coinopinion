@@ -1,18 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
+    background: url("images/Solana-Cryptocurrency.jpg") no-repeat top;
+    background-size: cover;
+    background-color: rgba(240, 240, 240, 0.9); /* Fondo semi-transparente */
+    color: #333; /* Cambia el color de texto según tus preferencias */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    height: 10vh;
+    position: relative;
 }
 
 .completion-container {
     background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* Aumenta el radio de las esquinas para un aspecto más suave */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Cambia la sombra para que sea más pronunciada */
     max-width: 400px;
     text-align: center;
     position: relative;
@@ -20,18 +24,18 @@ body {
 }
 
 .completion-container h1 {
-    color: #3498db;
-    font-size: 3rem; /* Aumenta el tamaño del título */
+    color: #002e12;
+    font-size: 2.5rem; /* Ajusta el tamaño del título */
     margin-bottom: 10px;
 }
 
 .completion-container p {
-    font-size: 2rem; /* Aumenta el tamaño del texto */
-    color: #333; /* Cambia el color del texto */
+    font-size: 1.8rem; /* Ajusta el tamaño del texto */
+    color: #555; /* Cambia el color del texto a un tono de gris más suave */
 }
 
 .back-button {
-    background-color: #3498db;
+    background-color: #156105;
     color: #fff;
     border: none;
     padding: 10px 20px;
