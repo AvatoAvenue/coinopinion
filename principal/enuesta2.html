@@ -4,78 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="encuestas.css">
-    <title>Cuestionario de Aplicaciones Más Usadas</title>
+    <title>Cuestionario de Aplicaciones Preferidas</title>
 </head>
 <body>
     <div class="container">
         <div class="user-container">
             <h2>Bienvenido, [Nombre]</h2>
             <img src="images/usuario.png" alt="Ícono de Usuario" style="max-width: 100px;">
-            <h3>Cuestionario de Aplicaciones Más Usadas</h3>
+            <h3>Cuestionario de Aplicaciones Preferidas</h3>
             <form id="quiz-form">
                 <div class="question" id="question1">
-                    <p>1. ¿Cuál es tu aplicación de mensajería instantánea favorita?</p>
+                    <p>1. ¿Cuál es tu aplicación de redes sociales preferida?</p>
                     <label>
-                        <input type="radio" name="mensajeria" value="WhatsApp"> WhatsApp
+                        <input type="radio" name="q1" value="a"> a) Facebook
                     </label>
                     <label>
-                        <input type="radio" name="mensajeria" value="Facebook Messenger"> Facebook Messenger
+                        <input type="radio" name="q1" value="b"> b) Instagram
                     </label>
                     <label>
-                        <input type="radio" name="mensajeria" value="Telegram"> Telegram
-                    </label>
-                </div>
-                <div class="question" id="question2">
-                    <p>2. ¿Qué red social utilizas con mayor frecuencia?</p>
-                    <label>
-                        <input type="radio" name="red_social" value="Facebook"> Facebook
+                        <input type="radio" name="q1" value="c"> c) Twitter
                     </label>
                     <label>
-                        <input type="radio" name="red_social" value="Instagram"> Instagram
-                    </label>
-                    <label>
-                        <input type="radio" name="red_social" value="Twitter"> Twitter
+                        <input type="radio" name="q1" value="d"> d) Otra (por favor, especifica): <input type="text" name="q1_other">
                     </label>
                 </div>
-                <div class="question" id="question3">
-                    <p>3. ¿Cuál es tu plataforma de streaming de video favorita?</p>
+                <div class="question" id="question2" style="display: none;">
+                    <p>2. ¿Cuál es tu aplicación de mensajería preferida?</p>
                     <label>
-                        <input type="radio" name="streaming" value="Netflix"> Netflix
+                        <input type="radio" name="q2" value="a"> a) WhatsApp
                     </label>
                     <label>
-                        <input type="radio" name="streaming" value="Amazon Prime Video"> Amazon Prime Video
+                        <input type="radio" name="q2" value="b"> b) Telegram
                     </label>
                     <label>
-                        <input type="radio" name="streaming" value="Disney+"> Disney+
-                    </label>
-                </div>
-                <div class="question" id="question4">
-                    <p>4. ¿Qué navegador web prefieres utilizar?</p>
-                    <label>
-                        <input type="radio" name="navegador" value="Google Chrome"> Google Chrome
+                        <input type="radio" name="q2" value="c"> c) Facebook Messenger
                     </label>
                     <label>
-                        <input type="radio" name="navegador" value="Mozilla Firefox"> Mozilla Firefox
-                    </label>
-                    <label>
-                        <input type="radio" name="navegador" value="Microsoft Edge"> Microsoft Edge
+                        <input type="radio" name="q2" value="d"> d) Otra (por favor, especifica): <input type="text" name="q2_other">
                     </label>
                 </div>
-                <div class="question" id="question5">
-                    <p>5. ¿Cuál es tu aplicación de correo electrónico principal?</p>
+                <div class="question" id="question3" style="display: none;">
+                    <p>3. ¿Cuál es tu aplicación de música preferida?</p>
                     <label>
-                        <input type="radio" name="correo" value="Gmail"> Gmail
+                        <input type="radio" name="q3" value="a"> a) Spotify
                     </label>
                     <label>
-                        <input type="radio" name="correo" value="Outlook"> Outlook
+                        <input type="radio" name="q3" value="b"> b) Apple Music
                     </label>
                     <label>
-                        <input type="radio" name="correo" value="Yahoo Mail"> Yahoo Mail
+                        <input type="radio" name="q3" value="c"> c) YouTube Music
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="d"> d) Otra (por favor, especifica): <input type="text" name="q3_other">
+                    </label>
+                </div>
+                <div class="question" id="question4" style="display: none;">
+                    <p>4. ¿Cuál es tu aplicación de productividad preferida?</p>
+                    <label>
+                        <input type="radio" name="q4" value="a"> a) Microsoft Office
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="b"> b) Google Workspace
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="c"> c) Notion
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="d"> d) Otra (por favor, especifica): <input type="text" name="q4_other">
+                    </label>
+                </div>
+                <div class="question" id="question5" style="display: none;">
+                    <p>5. ¿Cuál es tu aplicación de navegación preferida?</p>
+                    <label>
+                        <input type="radio" name="q5" value="a"> a) Google Maps
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="b"> b) Waze
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="c"> c) Apple Maps
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="d"> d) Otra (por favor, especifica): <input type="text" name="q5_other">
                     </label>
                 </div>
                 <button type="button" id="next-button" onclick="showNextQuestion()" class="quiz-button">Siguiente</button>
                 <button type="button" id="prev-button" style="display: none;" onclick="showPrevQuestion()" class="quiz-button">Regresar</button>
-                <button type="button" id="finish-button" style="display: none;" onclick="finishQuiz()" class="quiz-button">Finalizar</button>
+                <a href="finalizarencuesta.html" id="finish-button" style="display: none;" class="quiz-button">Finalizar</a> 
             </form>
         </div>
     </div>
@@ -129,8 +144,7 @@
                     return;
                 }
             }
-            // Aquí puedes agregar la lógica para finalizar el cuestionario
-            // Redireccionar a la página de "finalizarencuesta.html" u otra acción
+
             alert("Cuestionario completado. Redirigiendo...");
         }
     </script>
