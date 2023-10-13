@@ -32,7 +32,7 @@ header {
 }
 
 .logo {
-    text-align: left;
+    text-align: center; /* Centra el logo horizontalmente */
     margin: 10px;
 }
 
