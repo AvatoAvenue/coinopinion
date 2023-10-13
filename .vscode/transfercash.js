@@ -1,4 +1,4 @@
-import toast, { Toaster } from './coinopinion/node_modules/react-hot-toast';
+import toast, { Toaster } from './node_modules/react-hot-toast';
 import { 
     Connection,
     SystemProgram,
@@ -7,7 +7,7 @@ import {
     LAMPORTS_PER_SOL,
     clusterApiUrl,
     SendTransactionError,
-} from "./coinopinion/node_modules/@solana";
+} from "./node_modules/@solana";
 
 const SOLANA_NETWORK = "devnet";
 

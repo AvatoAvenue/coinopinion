@@ -1,3 +1,14 @@
+import toast, { Toaster } from './node_modules/react-hot-toast';
+import { 
+    Connection,
+    SystemProgram,
+    Transaction,
+    PublicKey,
+    LAMPORTS_PER_SOL,
+    clusterApiUrl,
+    SendTransactionError,
+} from "./node_modules/@solana";
+
 // Función para transferir saldo
 document.getElementById("transferirSaldo").addEventListener("click", function () {
     window.location.href = "transfercash.html";
