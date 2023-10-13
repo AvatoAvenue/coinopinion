@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #329c52;
     padding: 20px;
 }
 
@@ -32,7 +32,7 @@ main {
 }
 
 .banner {
-    background-color: #000000;
+    background-color: #555555;
     color: #fff;
     text-align: center;
     padding: 50px;
@@ -125,7 +125,7 @@ footer {
 }
 
 .image-card p {
-    color: #777;
+    color: #fffcfc;
 }
 
 .banner {
