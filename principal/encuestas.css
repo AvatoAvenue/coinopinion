@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background: url("images/fondogreen.jpg") no-repeat top;
     background-size: cover;
-    background-color: rgba(240, 240, 240, 0.9); /* Fondo semi-transparente */
+    background-color:rgba(3, 3, 3, 0.9); /* Fondo semi-transparente */
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -138,3 +138,28 @@ nav ul li a {
     display: inline-block; /* Hace que el botón "Regresar" esté en la misma línea que "Siguiente" */
     float: right; /* Alinea "Regresar" a la derecha */
 }
+ /* Estilos personalizados para la barra de progreso */
+ .progress-container {
+    width: 100%;
+    background-color: #ccc;
+    height: 20px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #4CAF50;
+}
+/* Estilos generales para la página principal */
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f0f0f0; /* Color de fondo opcional */
+  }
+  
+  .coin-opinion-header {
+    font-size: 36px;
+    color: #333; /* Cambia el color de texto según tus preferencias */
+    margin: 20px 0; /* Agrega margen superior e inferior para centrar */
+  }
