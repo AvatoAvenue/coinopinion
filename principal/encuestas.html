@@ -7,9 +7,34 @@
     <title>Cuestionario de Finanzas</title>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="logo">
+            <h1>Encuestas</h1>
+        </div>
+        <div class="user-profile">
+            <button class="wallet-button" id="wallet-button">Wallet</button>
+            <div class="dropdown">
+                <input type="checkbox" id="dropdown-toggle">
+                <label for="dropdown-toggle" class="profile-button">
+                    <img src="profile-picture.jpg" alt="Profile Picture">
+                </label>
+                <div class="dropdown-menu">
+                    <a href="#">Usuario</a>
+                    <a href="#">Ajustes</a>
+                    <a href="#">Cartera</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Encuesta 1</a></li>
+            <li><a href="#">Encuesta 2</a></li>
+            <li><a href="#">Encuesta 3</a></li>
+            <li><a href="#">Encuesta 4</a></li>
+        </ul>
+    </nav>
     <div class="container">
-        <button class="wallet-button">Ir a la Cartera</button>
         <div class="user-container">
             <h2>Bienvenido, Alonso Iker</h2>
             <img src="images/usuario.png" alt="Ícono de Usuario" style="max-width: 100px;">
@@ -37,9 +62,8 @@
                     </label>
                     <label>
                         <input type="radio" name="q2" value="c"> c) Un banco tradicional
-                    </label>     
+                    </label>
                 </div>
-                <!-- Agrega las demás preguntas de la misma manera -->
                 <div class="question" id="question3" style="display: none;">
                     <p>3. ¿Cuál es la minería de criptomonedas y cómo funciona?</p>
                     <label>
@@ -76,14 +100,13 @@
                         <input type="radio" name="q5" value="c"> c) Valor promedio
                     </label>
                 </div>
-                
-                
                 <button type="button" id="next-button" onclick="showNextQuestion()" class="quiz-button">Siguiente</button>
                 <button type="button" id="prev-button" style="display: none;" onclick="showPrevQuestion()" class="quiz-button">Regresar</button>
                 <button type="button" id="finish-button" style="display: none;" class="quiz-button">Finalizar</button>
             </form>
         </div>
     </div>
+
     <script>
         let currentQuestion = 1;
 
