@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.completion-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.completion-container h2 {
+    color: #333;
+    font-size: 2rem; /* Aumenta el tamaño del texto */
+    margin-bottom: 10px;
+}
+
+.completion-container p {
+    color: #333;
+    font-size: 1.5rem; /* Aumenta el tamaño del texto */
+}
+
+.back-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #258cd1;
+    transform: scale(1.05);
+}
+
+/* Animación de confeti */
+@keyframes confetti {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+    25% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(-5deg);
+    }
+    75% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(45deg, #f06, #fc6, #f06, #ff6);
+    border-radius: 50%;
+    animation: confetti 1s infinite;
+}
+
+.confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
