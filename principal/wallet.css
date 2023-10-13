@@ -43,7 +43,7 @@
         background-color: #12A088;
         color: #fff;
         font-size: 18px;
-        padding: 10px 15px;
+        padding: 10px 20px;
         margin: 0 -5%;
         border: none;
         border-radius: 5px;
@@ -58,7 +58,7 @@
         background-color: #12A088;
         color: #fff;
         font-size: 18px;
-        padding: 10px 15px;
+        padding: 10px 20px;
         margin: 0 -45%;
         border: none;
         border-radius: 5px;
@@ -73,7 +73,7 @@
         background-color: #12A088;
         color: #fff;
         font-size: 18px;
-        padding: 10px 15px;
+        padding: 10px 20px;
         margin: 0 20px;
         border: none;
         border-radius: 5px;
@@ -183,13 +183,13 @@
             flex-direction: column;
             background-color: #0C7A68;
             border: 2px solid #0C7A68;
-            padding: 10px;
+            padding: 20px;
           }
           .movimientocontainer p
           {
             align-items: center;
             border-bottom: 2px dotted #ffff;
-            padding-bottom: 3%;
+            padding-bottom: 5%;
           }
           .movimientocontainer p:last-child {
             border-bottom: none;
