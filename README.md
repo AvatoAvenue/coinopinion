@@ -3,4 +3,4 @@ Coin-Opinion is an innovative application tailored to offer businesses valuable 
 
 avato
 Edwin
-hola amikoos
+
