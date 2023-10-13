@@ -1,17 +1,17 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background: linear-gradient(45deg, #42b883, #3c9a8a); /* Degradado de verde */
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url("logo.jpeg") no-repeat center top;
-    background-size: contain;
+    overflow: hidden;
+    color: #fff; /* Color del texto principal */
 }
 
 .login-container {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -19,38 +19,91 @@ body {
     width: 100%;
     text-align: center;
     position: relative;
+    color: #333; /* Color del texto dentro del contenedor */
 }
 
-.logo {
-    width: 50px;
-    height: auto;
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
+.login-container h2 {
+    color: #333; /* Color del título */
+    margin: 0;
+    padding: 15px 0;
 }
 
-h2 {
+.input-group {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-group label {
+    display: block;
     color: #333;
 }
 
-input {
+.input-group input {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #42b883; /* Borde verde */
+    background-color: transparent;
+    color: #333;
     border-radius: 5px;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #3c9a8a; /* Cambio de color al enfocar */
+    transform: scale(1.05);
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
 }
 
 button {
-    background-color: #3498db;
+    background: linear-gradient(45deg, #42b883, #3c9a8a); /* Degradado de verde para el botón */
     color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #258cd1;
+    background: linear-gradient(45deg, #3c9a8a, #42b883); /* Cambio de color al pasar el cursor */
+    transform: scale(1.05);
+}
+
+.user-icon {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block; /* Centrar la imagen */
+    margin: 0 auto;
+}
+
+p {
+    color: #333;
+    margin-top: 20px;
+}
+
+a {
+    color: #42b883; /* Color del enlace */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
