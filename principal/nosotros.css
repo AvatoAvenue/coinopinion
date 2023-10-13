@@ -3,9 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url("images/fondogreen.jpg") no-repeat top;
-    background-size: cover;
-    color: #fff; /* Texto blanco */
+    background: #333;
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -16,22 +15,93 @@ body {
 
 .container {
     margin: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #777;
+    border-radius: 10px;
     padding: 20px;
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
+    background-color: #444;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s; /* Agregar una animación de desvanecimiento */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 header {
-    background-color: #000;
+    background-color: #222;
     color: #4caf50;
+    text-align: center;
+    padding: 20px 0;
+    animation: slideIn 1s; /* Agregar una animación de deslizamiento */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    text-align: center;
+    margin: 10px;
+    animation: rotate 4s infinite linear; /* Agregar una animación de rotación infinita */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+h1 {
+    font-size: 36px;
+    color: #4caf50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregar sombra al texto */
+    animation: bounce 1.5s; /* Agregar una animación de rebote */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Resto de tu CSS (sin cambios) */
+
+header {
+    background-color: #222; /* Fondo más oscuro */
+    color: #4caf50; /* Texto verde */
     text-align: center;
     padding: 20px 0;
 }
 
 .logo {
-    text-align: center; /* Centra el logo horizontalmente */
+    text-align: center;
     margin: 10px;
 }
 
@@ -42,37 +112,37 @@ header {
 
 h1 {
     font-size: 36px;
-    color: #4caf50; /* Título en verde */
+    color: #4caf50;
 }
 
 section {
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
+    background-color: #333; /* Fondo gris más claro */
+    color: #fff;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
 }
 
 h2 {
     font-size: 24px;
-    color: #4caf50; /* Título en verde */
+    color: #4caf50;
     margin-top: 0;
 }
 
 p {
-    color: #fff; /* Texto blanco */
+    color: #fff;
 }
 
 a {
-    display: block;
-    width: 150px;
-    margin: 20px auto;
-    padding: 10px 20px;
+    display: inline-block; /* Cambio a inline-block para ajustar al contenido */
+    padding: 12px 24px; /* Mayor relleno */
     background-color: #4caf50;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    margin: 20px 0; /* Mayor margen superior e inferior */
+    transition: background-color 0.3s; /* Efecto de transición al pasar el mouse */
 }
 
 a:hover {
@@ -81,14 +151,31 @@ a:hover {
 
 /* Estilos para el carrusel de imágenes */
 .image-slider {
-    text-align: center; /* Centrar las imágenes horizontalmente */
-    background: transparent; /* Hacer el fondo del carrusel transparente */
+    text-align: center;
+    background: transparent;
     padding: 0;
     margin: 0;
 }
 
 /* Estilo para las imágenes en el carrusel */
 .image-slider img {
-    max-width: 100%; /* Asegura que las imágenes se ajusten al contenedor */
+    max-width: 100%;
     height: auto;
+}
+
+/* Estilos para los botones de navegación del carrusel */
+.slick-prev, .slick-next {
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 50%; /* Botones redondeados */
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    transition: background-color 0.3s;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background-color: #f75a00;
 }
