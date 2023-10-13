@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url("images/logo.jpeg") no-repeat center top;
+    background: url("images/logo.jpeg") no-repeat top;
     background-size: contain;
 }
 
@@ -23,7 +23,7 @@ body {
 
 .logo {
     width: 50px;
-    height: auto;
+    height: 50px;
     position: absolute;
     top: -50px;
     left: 50%;
