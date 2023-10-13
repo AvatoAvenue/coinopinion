@@ -1,6 +1,6 @@
     body {
         font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
+        background-color: #12A088;
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -13,13 +13,16 @@
     }
     #saldo {
         font-size: 24px;
+        color: #ffff;
         font-weight: bold;
     }
     #historial {
+        color: #ffff;
         margin-top: 20px;
     }
     .tarjeta {
         border: 1px solid #ccc;
+        color: #ffff;
         padding: 10px;
         margin: 10px;
     }
