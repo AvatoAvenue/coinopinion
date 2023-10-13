@@ -13,6 +13,29 @@
         height: 100vh;
         position: relative;
     }
+    .header
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffff; 
+        height: 90px; 
+        width: 100%;
+        margin-bottom: 2%;
+    }
+    .header h1
+    {
+        color: #12A088;
+        justify-content: left;
+        font-size: 50px;
+        margin-left: 2%;
+    }
+    .header #transferirSaldo
+    {
+        color: #12A088;
+        justify-content: right;
+        font-size: 30px;
+    }
     h1 
     {
         justify-content: center;
@@ -45,6 +68,11 @@
             justify-content: center;
             align-items: center;
         }        
+        .tarjeta:hover { 
+            outline: none;
+            height: 200px;
+            border-color: #ffff;
+        }
           .card {
             margin: 10px;   
             width: 380px;
@@ -87,10 +115,3 @@
             letter-spacing: 2px;
             color: #ffffff;
           }
-        
-        .tarjeta:hover { 
-            outline: none;
-            width: 350px;
-            height: 200px;
-            border-color: #ffff;
-        }
