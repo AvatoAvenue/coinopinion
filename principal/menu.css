@@ -97,3 +97,29 @@ nav ul li a:hover {
     background-color: #f75a00;
     transform: scale(2);
 }
+
+.header
+{
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffff; 
+    height: 90px; 
+    width: 100%;
+    margin-bottom: 2%;
+}
+.header img 
+{
+    width: 100px;
+    height: auto;
+    margin-right: 5%;
+    margin-left: 0%;
+}
+.header h1
+{
+    color: #12A088;
+    justify-content: left;
+    font-size: 50px;
+    margin-left: -55%;
+}
