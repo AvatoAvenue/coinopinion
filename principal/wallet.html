@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="wallet.css">
+    <title>Cartera</title>
+</head>
+<body>
+    <h1>Cartera</h1>
+    <div id="saldo">
+        Saldo actual: $1000
+    </div>
+    <div id="historial">
+        <h2>Historial de movimientos</h2>
+        <!-- Aquí se mostrará el historial de movimientos -->
+    </div>
+    <div id="tarjetas">
+        <h2>Tarjetas Registradas</h2>
+        <div class="tarjeta">
+            Tarjeta 1: **** **** **** 1234
+        </div>
+        <div class="tarjeta">
+            Tarjeta 2: **** **** **** 5678
+        </div>
+    </div>
+    <button id="transferirSaldo">Transferir Saldo</button>
+    <button id="agregarTarjeta">Añadir Tarjeta</button>
+    <button id="volverAtras">Volver Atrás</button>
+
+    <script>
+        // Función para transferir saldo
+        document.getElementById("transferirSaldo").addEventListener("click", function () {
+            // Aquí puedes agregar la lógica para transferir saldo
+            // Por ejemplo, mostrar un formulario para ingresar la cantidad a transferir
+        });
+
+        // Función para agregar una tarjeta
+        document.getElementById("agregarTarjeta").addEventListener("click", function () {
+            // Aquí puedes agregar la lógica para agregar una tarjeta
+            // Por ejemplo, mostrar un formulario para ingresar los datos de la tarjeta
+        });
+
+        // Función para volver atrás
+        document.getElementById("volverAtras").addEventListener("click", function () {
+            // Aquí puedes agregar la lógica para volver atrás, por ejemplo, redirigir a la página anterior
+        });
+    </script>
+</body>
+</html>
