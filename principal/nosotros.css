@@ -5,6 +5,27 @@ body {
     padding: 0;
     background-color: #ccc; /* Fondo gris */
     color: #fff; /* Texto blanco */
+    /*FONDO*/
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: url("images/fondogreen.jpg") no-repeat top;
+    background-size: cover;
+    background-color: rgba(240, 240, 240, 0.9); /* Fondo semi-transparente */
+    color: #333; /* Cambia el color de texto según tus preferencias */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    margin: 20px; /* Agregar margen alrededor del contenido */
+    border: 1px solid #ccc; /* Agregar un contorno alrededor del contenido */
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
 }
 
 header {
@@ -12,6 +33,16 @@ header {
     color: #4caf50; /* Texto verde para el encabezado */
     text-align: center;
     padding: 20px 0;
+}
+
+.logo {
+    text-align: left;
+    margin: 10px;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
 }
 
 h1 {
@@ -22,9 +53,9 @@ section {
     background-color: #fff;
     color: #000; /* Texto negro para el contenido */
     padding: 20px;
-    margin: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Agregar margen inferior entre secciones */
 }
 
 h2 {
@@ -53,6 +84,7 @@ footer {
     background-color: #000; /* Fondo negro */
     color: #fff; /* Texto blanco */
 }
+
 /* Estilos para el carrusel de imágenes */
 .image-slider {
     text-align: center; /* Centrar las imágenes horizontalmente */
