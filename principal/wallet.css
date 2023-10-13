@@ -23,18 +23,64 @@
         width: 100%;
         margin-bottom: 2%;
     }
+    .header img 
+    {
+        width: 100px;
+        height: auto;
+        margin-right: 5%;
+        margin-left: 0%;
+    }
     .header h1
     {
         color: #12A088;
         justify-content: left;
         font-size: 50px;
-        margin-left: 2%;
+        margin-left: -55%;
     }
     .header #transferirSaldo
     {
-        color: #12A088;
-        justify-content: right;
-        font-size: 30px;
+        background-color: #12A088;
+        color: #fff;
+        font-size: 18px;
+        padding: 10px 15px;
+        margin: 0 -5%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .header #transferirSaldo:hover {
+        background-color: #0C7A68;
+    }
+    .header #agregarTarjeta
+    {
+        background-color: #12A088;
+        color: #fff;
+        font-size: 18px;
+        padding: 10px 15px;
+        margin: 0 -45%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .header #agregarTarjeta:hover {
+        background-color: #0C7A68;
+    }
+    .header #Menu
+    {
+        background-color: #12A088;
+        color: #fff;
+        font-size: 18px;
+        padding: 10px 15px;
+        margin: 0 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .header #Menu:hover {
+        background-color: #0C7A68;
     }
     h1 
     {
@@ -43,8 +89,7 @@
     }
     h2
     {
-        justify-content: center;
-        align-items: center;
+        justify-content: right;
         color:#ffff
     }
     #saldo {
