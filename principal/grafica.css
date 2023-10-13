@@ -1,0 +1,14 @@
+/* Estilos para el contenedor del gráfico */
+.chart {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+#imagen {
+    width: 100%;
+    height: auto; /* Mantén la proporción original de la imagen */
+    display: block; /* Elimina espacios debajo de la imagen */
+}
