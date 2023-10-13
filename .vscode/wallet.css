@@ -32,10 +32,11 @@
     }
     .header h1
     {
+      display: block;
         color: #12A088;
         justify-content: left;
         font-size: 50px;
-        margin-left: -55%;
+        margin-left: -35%;
     }
     .header #transferirSaldo
     {
@@ -58,13 +59,29 @@
         color: #fff;
         font-size: 18px;
         padding: 10px 20px;
-        margin: 0 -45%;
+        margin: 0 0%;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
     .header #agregarTarjeta:hover {
+        background-color: #0C7A68;
+      }
+      /* Estilos para el botón de la billetera */
+      #conectar {
+        background-color: #12A088;
+        color: #fff;
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 0 -30%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    #conectar:hover {
         background-color: #0C7A68;
     }
     .header #Menu

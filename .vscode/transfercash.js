@@ -1,6 +1,5 @@
-import toast, { Toaster } from 'react-hot-toast';
-import { useRouter } from "next/router";
-import {
+import toast, { Toaster } from './coinopinion/node_modules/react-hot-toast';
+import { 
     Connection,
     SystemProgram,
     Transaction,
@@ -8,13 +7,12 @@ import {
     LAMPORTS_PER_SOL,
     clusterApiUrl,
     SendTransactionError,
-} from "@solana/web3.js";
+} from "./coinopinion/node_modules/@solana";
 
 const SOLANA_NETWORK = "devnet";
 
 const Home = () => {
     const [publicKey, setPublicKey] = useState(null);
-    const router = useRouter();
     const [balance, setBalance] = useState(0);
     const [receiver, setReceiver] = useState(null);
     const [amount, setAmount] = useState(null);

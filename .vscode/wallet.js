@@ -39,3 +39,58 @@ document.getElementById("Menu").addEventListener("click", function () {
     // Aquí puedes agregar la lógica para volver atrás, por ejemplo, redirigir a la página anterior
     window.location.href = "menu.html";
 });
+
+const conectarButton = document.getElementById("conectar");
+
+// Agrega un Event Listener al botón "conectar" para iniciar sesión
+conectarButton.addEventListener("click", async () => {
+    await signIn();
+});
+
+    //Funcion para Iniciar sesion con nuestra Wallet de Phantom
+    const signIn = async () => {
+        //Si phantom no esta instalado
+        const provider = window?.phantom?.solana;
+        const { solana } = window;
+
+        if (!provider?.isPhantom || !solana.isPhantom) {
+            toast.error("Phantom no esta instalado");
+            setTimeout(() => {
+                window.open("https://phantom.app/", "_blank");
+            }, 2000);
+            return;
+        }
+        //Si phantom esta instalado
+        let phantom;
+        if (provider?.isPhantom) phantom = provider;
+
+        const { publicKey } = await phantom.connect(); //conecta a phantom
+        console.log("publicKey", publicKey.toString()); //muestra la publicKey
+        setPublicKey(publicKey.toString()); //guarda la publicKey en el state
+        window.localStorage.setItem("publicKey", publicKey.toString()); //guarda la publicKey en el localStorage
+
+        toast.success("Tu Wallet esta conectada");
+
+        getBalances(publicKey);
+    };
+
+    //Funcion para obtener el balance de nuestra wallet
+
+    const getBalances = async (publicKey) => {
+        try {
+            const connection = new Connection(
+                clusterApiUrl(SOLANA_NETWORK),
+                "confirmed"
+            );
+
+            const balance = await connection.getBalance(
+                new PublicKey(publicKey)
+            );
+
+            const balancenew = balance / LAMPORTS_PER_SOL;
+            setBalance(balancenew);
+        } catch (error) {
+            console.error("ERROR GET BALANCE", error);
+            toast.error("Something went wrong getting the balance");
+        }
+    };
