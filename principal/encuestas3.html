@@ -14,12 +14,64 @@
             <h3>Cuestionario de Cultura General</h3>
             <form id="quiz-form">
                 <div class="question" id="question1">
-                    <p>1. ¿En qué año se fundó la ONU (Organización de las Naciones Unidas)?</p>
-                    <input type="number" name="onu" placeholder="Escribe el año de fundación">
+                    <p>1. ¿Cuál es la capital de Francia?</p>
+                    <label>
+                        <input type="radio" name="q1" value="a"> a) Madrid
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="b"> b) Roma
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="c"> c) París
+                    </label>
                 </div>
                 <div class="question" id="question2" style="display: none;">
-                    <p>2. ¿Quién escribió la obra de teatro "Romeo y Julieta"?</p>
-                    <input type="text" name="shakespeare" placeholder="Escribe el nombre del autor">
+                    <p>2. ¿Quién escribió "Don Quijote de la Mancha"?</p>
+                    <label>
+                        <input type="radio" name="q2" value="a"> a) Shakespeare
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="b"> b) Cervantes
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="c"> c) Dickens
+                    </label>
+                </div>
+                <div class="question" id="question3" style="display: none;">
+                    <p>3. ¿En qué año se realizó la Revolución Rusa?</p>
+                    <label>
+                        <input type="radio" name="q3" value="a"> a) 1776
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="b"> b) 1917
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="c"> c) 1945
+                    </label>
+                </div>
+                <div class="question" id="question4" style="display: none;">
+                    <p>4. ¿Cuál es el planeta más grande del sistema solar?</p>
+                    <label>
+                        <input type="radio" name="q4" value="a"> a) Marte
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="b"> b) Júpiter
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="c"> c) Venus
+                    </label>
+                </div>
+                <div class="question" id="question5" style="display: none;">
+                    <p>5. ¿Quién pintó la "Mona Lisa"?</p>
+                    <label>
+                        <input type="radio" name="q5" value="a"> a) Vincent van Gogh
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="b"> b) Leonardo da Vinci
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="c"> c) Pablo Picasso
+                    </label>
                 </div>
                 <button type="button" id="next-button" onclick="showNextQuestion()" class="quiz-button">Siguiente</button>
                 <button type="button" id="prev-button" style="display: none;" onclick="showPrevQuestion()" class="quiz-button">Regresar</button>
@@ -32,27 +84,19 @@
         let currentQuestion = 1;
 
         function showNextQuestion() {
-            // Validar que se haya respondido la pregunta antes de avanzar
-            if (currentQuestion === 1) {
-                const onuInput = document.querySelector('input[name="onu"]');
-                if (onuInput.value === '' || isNaN(onuInput.value)) {
-                    alert("Por favor, escribe el año de fundación de la ONU antes de continuar.");
-                    return;
-                }
-            } else if (currentQuestion === 2) {
-                const shakespeareInput = document.querySelector('input[name="shakespeare"]');
-                if (shakespeareInput.value === '') {
-                    alert("Por favor, escribe el nombre del autor de 'Romeo y Julieta' antes de continuar.");
-                    return;
-                }
+            // Validar que se haya seleccionado una respuesta antes de avanzar
+            const selectedOption = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
+            if (!selectedOption) {
+                alert("Por favor, selecciona una respuesta antes de continuar.");
+                return;
             }
 
             document.getElementById(`question${currentQuestion}`).style.display = "none";
             currentQuestion++;
-            if (currentQuestion <= 2) {
+            if (currentQuestion <= 5) {
                 document.getElementById(`question${currentQuestion}`).style.display = "block";
             }
-            if (currentQuestion === 2) {
+            if (currentQuestion === 5) {
                 document.getElementById("next-button").style.display = "none";
                 document.getElementById("finish-button").style.display = "block";
             }
@@ -67,7 +111,7 @@
             if (currentQuestion >= 1) {
                 document.getElementById(`question${currentQuestion}`).style.display = "block";
             }
-            if (currentQuestion < 2) {
+            if (currentQuestion < 5) {
                 document.getElementById("next-button").style.display = "block";
                 document.getElementById("finish-button").style.display = "none";
             }
@@ -77,8 +121,17 @@
         }
 
         function finishQuiz() {
-            // Puedes agregar la lógica para procesar las respuestas aquí
-            alert("Cuestionario de Cultura General completado. Gracias por participar.");
+            // Validar que todas las preguntas se hayan contestado
+            for (let i = 1; i <= 5; i++) {
+                const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                if (!selectedOption) {
+                    alert("Por favor, contesta todas las preguntas antes de finalizar.");
+                    return;
+                }
+            }
+            // Aquí puedes agregar la lógica para finalizar el cuestionario
+            // Redireccionar a la página de "finalizarencuesta.html" u otra acción
+            alert("Cuestionario completado. Redirigiendo...");
         }
     </script>
 </body>

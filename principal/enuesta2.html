@@ -15,11 +15,63 @@
             <form id="quiz-form">
                 <div class="question" id="question1">
                     <p>1. ¿Cuál es tu aplicación de mensajería instantánea favorita?</p>
-                    <input type="text" name="mensajeria" placeholder="Escribe tu aplicación favorita">
+                    <label>
+                        <input type="radio" name="mensajeria" value="WhatsApp"> WhatsApp
+                    </label>
+                    <label>
+                        <input type="radio" name="mensajeria" value="Facebook Messenger"> Facebook Messenger
+                    </label>
+                    <label>
+                        <input type="radio" name="mensajeria" value="Telegram"> Telegram
+                    </label>
                 </div>
-                <div class="question" id="question2" style="display: none;">
+                <div class="question" id="question2">
                     <p>2. ¿Qué red social utilizas con mayor frecuencia?</p>
-                    <input type="text" name="red_social" placeholder="Escribe tu red social favorita">
+                    <label>
+                        <input type="radio" name="red_social" value="Facebook"> Facebook
+                    </label>
+                    <label>
+                        <input type="radio" name="red_social" value="Instagram"> Instagram
+                    </label>
+                    <label>
+                        <input type="radio" name="red_social" value="Twitter"> Twitter
+                    </label>
+                </div>
+                <div class="question" id="question3">
+                    <p>3. ¿Cuál es tu plataforma de streaming de video favorita?</p>
+                    <label>
+                        <input type="radio" name="streaming" value="Netflix"> Netflix
+                    </label>
+                    <label>
+                        <input type="radio" name="streaming" value="Amazon Prime Video"> Amazon Prime Video
+                    </label>
+                    <label>
+                        <input type="radio" name="streaming" value="Disney+"> Disney+
+                    </label>
+                </div>
+                <div class="question" id="question4">
+                    <p>4. ¿Qué navegador web prefieres utilizar?</p>
+                    <label>
+                        <input type="radio" name="navegador" value="Google Chrome"> Google Chrome
+                    </label>
+                    <label>
+                        <input type="radio" name="navegador" value="Mozilla Firefox"> Mozilla Firefox
+                    </label>
+                    <label>
+                        <input type="radio" name="navegador" value="Microsoft Edge"> Microsoft Edge
+                    </label>
+                </div>
+                <div class="question" id="question5">
+                    <p>5. ¿Cuál es tu aplicación de correo electrónico principal?</p>
+                    <label>
+                        <input type="radio" name="correo" value="Gmail"> Gmail
+                    </label>
+                    <label>
+                        <input type="radio" name="correo" value="Outlook"> Outlook
+                    </label>
+                    <label>
+                        <input type="radio" name="correo" value="Yahoo Mail"> Yahoo Mail
+                    </label>
                 </div>
                 <button type="button" id="next-button" onclick="showNextQuestion()" class="quiz-button">Siguiente</button>
                 <button type="button" id="prev-button" style="display: none;" onclick="showPrevQuestion()" class="quiz-button">Regresar</button>
@@ -32,27 +84,19 @@
         let currentQuestion = 1;
 
         function showNextQuestion() {
-            // Validar que se haya respondido la pregunta antes de avanzar
-            if (currentQuestion === 1) {
-                const mensajeriaInput = document.querySelector('input[name="mensajeria"]');
-                if (mensajeriaInput.value === '') {
-                    alert("Por favor, escribe tu aplicación de mensajería favorita antes de continuar.");
-                    return;
-                }
-            } else if (currentQuestion === 2) {
-                const redSocialInput = document.querySelector('input[name="red_social"]');
-                if (redSocialInput.value === '') {
-                    alert("Por favor, escribe tu red social favorita antes de continuar.");
-                    return;
-                }
+            // Validar que se haya seleccionado una respuesta antes de avanzar
+            const selectedOption = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
+            if (!selectedOption) {
+                alert("Por favor, selecciona una respuesta antes de continuar.");
+                return;
             }
 
             document.getElementById(`question${currentQuestion}`).style.display = "none";
             currentQuestion++;
-            if (currentQuestion <= 2) {
+            if (currentQuestion <= 5) {
                 document.getElementById(`question${currentQuestion}`).style.display = "block";
             }
-            if (currentQuestion === 2) {
+            if (currentQuestion === 5) {
                 document.getElementById("next-button").style.display = "none";
                 document.getElementById("finish-button").style.display = "block";
             }
@@ -67,7 +111,7 @@
             if (currentQuestion >= 1) {
                 document.getElementById(`question${currentQuestion}`).style.display = "block";
             }
-            if (currentQuestion < 2) {
+            if (currentQuestion < 5) {
                 document.getElementById("next-button").style.display = "block";
                 document.getElementById("finish-button").style.display = "none";
             }
@@ -77,8 +121,17 @@
         }
 
         function finishQuiz() {
-            // Puedes agregar la lógica para procesar y almacenar las respuestas aquí
-            alert("Cuestionario de Aplicaciones Más Usadas completado. Gracias por participar.");
+            // Validar que todas las preguntas se hayan contestado
+            for (let i = 1; i <= 5; i++) {
+                const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                if (!selectedOption) {
+                    alert("Por favor, contesta todas las preguntas antes de finalizar.");
+                    return;
+                }
+            }
+            // Aquí puedes agregar la lógica para finalizar el cuestionario
+            // Redireccionar a la página de "finalizarencuesta.html" u otra acción
+            alert("Cuestionario completado. Redirigiendo...");
         }
     </script>
 </body>

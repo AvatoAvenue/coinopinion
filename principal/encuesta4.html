@@ -17,7 +17,7 @@
                     <p>1. ¿Cuál es tu color favorito?</p>
                     <input type="text" name="color" placeholder="Escribe tu color favorito">
                 </div>
-                <div class="question" id="question2" style="display: none;">
+                <div class="question" id="question2">
                     <p>2. ¿Prefieres el café o el té?</p>
                     <label>
                         <input type="radio" name="bebida" value="cafe"> a) Café
@@ -26,8 +26,47 @@
                         <input type="radio" name="bebida" value="te"> b) Té
                     </label>
                 </div>
+                <div class="question" id="question3">
+                    <p>3. ¿Cuál es tu estación del año preferida?</p>
+                    <label>
+                        <input type="radio" name="estacion" value="primavera"> a) Primavera
+                    </label>
+                    <label>
+                        <input type="radio" name="estacion" value="verano"> b) Verano
+                    </label>
+                    <label>
+                        <input type="radio" name="estacion" value="otoño"> c) Otoño
+                    </label>
+                    <label>
+                        <input type="radio" name="estacion" value="invierno"> d) Invierno
+                    </label>
+                </div>
+                <div class="question" id="question4">
+                    <p>4. ¿Cuál es tu género musical favorito?</p>
+                    <label>
+                        <input type="radio" name="musica" value="rock"> a) Rock
+                    </label>
+                    <label>
+                        <input type="radio" name="musica" value="pop"> b) Pop
+                    </label>
+                    <label>
+                        <input type="radio" name="musica" value="hip-hop"> c) Hip-Hop
+                    </label>
+                    <label>
+                        <input type="radio" name="musica" value="electrónica"> d) Música Electrónica
+                    </label>
+                </div>
+                <div class="question" id="question5">
+                    <p>5. ¿Prefieres el cine o las series de TV?</p>
+                    <label>
+                        <input type="radio" name="entretenimiento" value="cine"> a) Cine
+                    </label>
+                    <label>
+                        <input type="radio" name="entretenimiento" value="series"> b) Series de TV
+                    </label>
+                </div>
                 <button type="button" id="next-button" onclick="showNextQuestion()" class="quiz-button">Siguiente</button>
-                <button type="button" id="prev-button" style="display: none;" onclick="showPrevQuestion()" class="quiz-button">Regresar</button>
+                <button type="button" id="prev-button" style="display: none;" onclick "showPrevQuestion()" class="quiz-button">Regresar</button>
                 <button type="button" id="finish-button" style="display: none;" onclick="finishQuiz()" class="quiz-button">Finalizar</button>
             </form>
         </div>
@@ -37,21 +76,45 @@
         let currentQuestion = 1;
 
         function showNextQuestion() {
-            // Validar que se haya respondido la pregunta antes de avanzar
+            // Validar que se haya seleccionado una respuesta antes de avanzar
             if (currentQuestion === 1) {
                 const colorInput = document.querySelector('input[name="color"]');
                 if (colorInput.value === '') {
                     alert("Por favor, escribe tu color favorito antes de continuar.");
                     return;
                 }
+            } else if (currentQuestion === 2) {
+                const bebidaInput = document.querySelector('input[name="bebida"]:checked');
+                if (!bebidaInput) {
+                    alert("Por favor, selecciona tu preferencia de bebida antes de continuar.");
+                    return;
+                }
+            } else if (currentQuestion === 3) {
+                const estacionInput = document.querySelector('input[name="estacion"]:checked');
+                if (!estacionInput) {
+                    alert("Por favor, selecciona tu estación del año preferida antes de continuar.");
+                    return;
+                }
+            } else if (currentQuestion === 4) {
+                const musicaInput = document.querySelector('input[name="musica"]:checked');
+                if (!musicaInput) {
+                    alert("Por favor, selecciona tu género musical preferido antes de continuar.");
+                    return;
+                }
+            } else if (currentQuestion === 5) {
+                const entretenimientoInput = document.querySelector('input[name="entretenimiento"]:checked');
+                if (!entretenimientoInput) {
+                    alert("Por favor, selecciona tu preferencia de entretenimiento antes de continuar.");
+                    return;
+                }
             }
 
             document.getElementById(`question${currentQuestion}`).style.display = "none";
             currentQuestion++;
-            if (currentQuestion <= 2) {
+            if (currentQuestion <= 5) {
                 document.getElementById(`question${currentQuestion}`).style.display = "block";
             }
-            if (currentQuestion === 2) {
+            if (currentQuestion === 5) {
                 document.getElementById("next-button").style.display = "none";
                 document.getElementById("finish-button").style.display = "block";
             }
@@ -66,7 +129,7 @@
             if (currentQuestion >= 1) {
                 document.getElementById(`question${currentQuestion}`).style.display = "block";
             }
-            if (currentQuestion < 2) {
+            if (currentQuestion < 5) {
                 document.getElementById("next-button").style.display = "block";
                 document.getElementById("finish-button").style.display = "none";
             }
