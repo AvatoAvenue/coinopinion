@@ -32,7 +32,7 @@ header {
 }
 
 .logo {
-    text-align: left;
+    text-align: center; /* Centra el logo horizontalmente */
     margin: 10px;
 }
 
@@ -83,4 +83,13 @@ a:hover {
 /* Estilos para el carrusel de imágenes */
 .image-slider {
     text-align: center; /* Centrar las imágenes horizontalmente */
+    background: transparent; /* Hacer el fondo del carrusel transparente */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para las imágenes en el carrusel */
+.image-slider img {
+    max-width: 100%; /* Asegura que las imágenes se ajusten al contenedor */
+    height: auto;
 }
