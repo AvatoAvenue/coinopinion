@@ -4,78 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="encuestas.css">
-    <title>Cuestionario de Finanzas</title>
+    <title>Cuestionario de Preferencias</title>
 </head>
 <body>
     <div class="container">
         <div class="user-container">
-            <h2>Bienvenido, Alonso Iker</h2>
+            <h2>Bienvenido, [Nombre]</h2>
             <img src="images/usuario.png" alt="Ícono de Usuario" style="max-width: 100px;">
-            <h3>Cuestionario de Finanzas</h3>
+            <h3>Cuestionario de Preferencias</h3>
             <form id="quiz-form">
                 <div class="question" id="question1">
-                    <p>1. ¿Cuál es la criptomoneda más antigua?</p>
+                    <p>1. ¿Cuál es tu color favorito?</p>
+                    <input type="text" name="color" placeholder="Escribe tu color favorito">
+                </div>
+                <div class="question" id="question2">
+                    <p>2. ¿Prefieres el café o el té?</p>
                     <label>
-                        <input type="radio" name="q1" value="a"> a) Bitcoin
+                        <input type="radio" name="bebida" value="cafe"> a) Café
                     </label>
                     <label>
-                        <input type="radio" name="q1" value="b"> b) Ethereum
-                    </label>
-                    <label>
-                        <input type="radio" name="q1" value="c"> c) Ripple
+                        <input type="radio" name="bebida" value="te"> b) Té
                     </label>
                 </div>
-                <div class="question" id="question2" style="display: none;">
-                    <p>2. ¿Qué es un monedero (wallet) de criptomonedas?</p>
+                <div class="question" id="question3">
+                    <p>3. ¿Cuál es tu estación del año preferida?</p>
                     <label>
-                        <input type="radio" name="q2" value="a"> a) Un servicio de intercambio de criptomonedas
+                        <input type="radio" name="estacion" value="primavera"> a) Primavera
                     </label>
                     <label>
-                        <input type="radio" name="q2" value="b"> b) Un programa que almacena criptomonedas
+                        <input type="radio" name="estacion" value="verano"> b) Verano
                     </label>
                     <label>
-                        <input type="radio" name="q2" value="c"> c) Un banco tradicional
-                    </label>
-                </div>
-                <div class="question" id="question3" style="display: none;">
-                    <p>3. ¿Cuál es la minería de criptomonedas y cómo funciona?</p>
-                    <label>
-                        <input type="radio" name="q3" value="a"> a) Proceso para crear criptomonedas
+                        <input type="radio" name="estacion" value="otoño"> c) Otoño
                     </label>
                     <label>
-                        <input type="radio" name="q3" value="b"> b) Compra de criptomonedas en un exchange
-                    </label>
-                    <label>
-                        <input type="radio" name="q3" value="c"> c) Protección de billetera criptográfica
+                        <input type="radio" name="estacion" value="invierno"> d) Invierno
                     </label>
                 </div>
-                <div class="question" id="question4" style="display: none;">
-                    <p>4. ¿Sabes qué es Solana?</p>
+                <div class="question" id="question4">
+                    <p>4. ¿Cuál es tu género musical favorito?</p>
                     <label>
-                        <input type="radio" name="q4" value="a"> a) Sí
+                        <input type="radio" name="musica" value="rock"> a) Rock
                     </label>
                     <label>
-                        <input type="radio" name="q4" value="b"> b) No
+                        <input type="radio" name="musica" value="pop"> b) Pop
                     </label>
                     <label>
-                        <input type="radio" name="q4" value="c"> c) Más o menos
+                        <input type="radio" name="musica" value="hip-hop"> c) Hip-Hop
+                    </label>
+                    <label>
+                        <input type="radio" name="musica" value="electrónica"> d) Música Electrónica
                     </label>
                 </div>
-                <div class="question" id="question5" style="display: none;">
-                    <p>5. ¿Sabes el valor de una Criptomoneda?</p>
+                <div class="question" id="question5">
+                    <p>5. ¿Prefieres el cine o las series de TV?</p>
                     <label>
-                        <input type="radio" name="q5" value="a"> a) Muy alto su valor
+                        <input type="radio" name="entretenimiento" value="cine"> a) Cine
                     </label>
                     <label>
-                        <input type="radio" name="q5" value="b"> b) Muy bajo su valor
-                    </label>
-                    <label>
-                        <input type="radio" name="q5" value="c"> c) Valor promedio
+                        <input type="radio" name="entretenimiento" value="series"> b) Series de TV
                     </label>
                 </div>
                 <button type="button" id="next-button" onclick="showNextQuestion()" class="quiz-button">Siguiente</button>
-                <button type="button" id="prev-button" style="display: none;" onclick="showPrevQuestion()" class="quiz-button">Regresar</button>
-                <a href="finalizarencuesta.html" id="finish-button" style="display: none;" class="quiz-button">Finalizar</a> 
+                <button type="button" id="prev-button" style="display: none;" onclick "showPrevQuestion()" class="quiz-button">Regresar</button>
+                <button type="button" id="finish-button" style="display: none;" onclick="finishQuiz()" class="quiz-button">Finalizar</button>
             </form>
         </div>
     </div>
@@ -84,6 +76,39 @@
         let currentQuestion = 1;
 
         function showNextQuestion() {
+            // Validar que se haya seleccionado una respuesta antes de avanzar
+            if (currentQuestion === 1) {
+                const colorInput = document.querySelector('input[name="color"]');
+                if (colorInput.value === '') {
+                    alert("Por favor, escribe tu color favorito antes de continuar.");
+                    return;
+                }
+            } else if (currentQuestion === 2) {
+                const bebidaInput = document.querySelector('input[name="bebida"]:checked');
+                if (!bebidaInput) {
+                    alert("Por favor, selecciona tu preferencia de bebida antes de continuar.");
+                    return;
+                }
+            } else if (currentQuestion === 3) {
+                const estacionInput = document.querySelector('input[name="estacion"]:checked');
+                if (!estacionInput) {
+                    alert("Por favor, selecciona tu estación del año preferida antes de continuar.");
+                    return;
+                }
+            } else if (currentQuestion === 4) {
+                const musicaInput = document.querySelector('input[name="musica"]:checked');
+                if (!musicaInput) {
+                    alert("Por favor, selecciona tu género musical preferido antes de continuar.");
+                    return;
+                }
+            } else if (currentQuestion === 5) {
+                const entretenimientoInput = document.querySelector('input[name="entretenimiento"]:checked');
+                if (!entretenimientoInput) {
+                    alert("Por favor, selecciona tu preferencia de entretenimiento antes de continuar.");
+                    return;
+                }
+            }
+
             document.getElementById(`question${currentQuestion}`).style.display = "none";
             currentQuestion++;
             if (currentQuestion <= 5) {
@@ -111,6 +136,11 @@
             if (currentQuestion === 1) {
                 document.getElementById("prev-button").style.display = "none";
             }
+        }
+
+        function finishQuiz() {
+            // Puedes agregar la lógica para procesar y almacenar las respuestas aquí
+            alert("Cuestionario de Preferencias completado. Gracias por participar.");
         }
     </script>
 </body>

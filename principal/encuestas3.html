@@ -4,78 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="encuestas.css">
-    <title>Cuestionario de Finanzas</title>
+    <title>Cuestionario de Cultura General</title>
 </head>
 <body>
     <div class="container">
         <div class="user-container">
-            <h2>Bienvenido, Alonso Iker</h2>
+            <h2>Bienvenido, [Nombre]</h2>
             <img src="images/usuario.png" alt="Ícono de Usuario" style="max-width: 100px;">
-            <h3>Cuestionario de Finanzas</h3>
+            <h3>Cuestionario de Cultura General</h3>
             <form id="quiz-form">
                 <div class="question" id="question1">
-                    <p>1. ¿Cuál es la criptomoneda más antigua?</p>
+                    <p>1. ¿Cuál es la capital de Francia?</p>
                     <label>
-                        <input type="radio" name="q1" value="a"> a) Bitcoin
+                        <input type="radio" name="q1" value="a"> a) Madrid
                     </label>
                     <label>
-                        <input type="radio" name="q1" value="b"> b) Ethereum
+                        <input type="radio" name="q1" value="b"> b) Roma
                     </label>
                     <label>
-                        <input type="radio" name="q1" value="c"> c) Ripple
+                        <input type="radio" name="q1" value="c"> c) París
                     </label>
                 </div>
                 <div class="question" id="question2" style="display: none;">
-                    <p>2. ¿Qué es un monedero (wallet) de criptomonedas?</p>
+                    <p>2. ¿Quién escribió "Don Quijote de la Mancha"?</p>
                     <label>
-                        <input type="radio" name="q2" value="a"> a) Un servicio de intercambio de criptomonedas
+                        <input type="radio" name="q2" value="a"> a) Shakespeare
                     </label>
                     <label>
-                        <input type="radio" name="q2" value="b"> b) Un programa que almacena criptomonedas
+                        <input type="radio" name="q2" value="b"> b) Cervantes
                     </label>
                     <label>
-                        <input type="radio" name="q2" value="c"> c) Un banco tradicional
+                        <input type="radio" name="q2" value="c"> c) Dickens
                     </label>
                 </div>
                 <div class="question" id="question3" style="display: none;">
-                    <p>3. ¿Cuál es la minería de criptomonedas y cómo funciona?</p>
+                    <p>3. ¿En qué año se realizó la Revolución Rusa?</p>
                     <label>
-                        <input type="radio" name="q3" value="a"> a) Proceso para crear criptomonedas
+                        <input type="radio" name="q3" value="a"> a) 1776
                     </label>
                     <label>
-                        <input type="radio" name="q3" value="b"> b) Compra de criptomonedas en un exchange
+                        <input type="radio" name="q3" value="b"> b) 1917
                     </label>
                     <label>
-                        <input type="radio" name="q3" value="c"> c) Protección de billetera criptográfica
+                        <input type="radio" name="q3" value="c"> c) 1945
                     </label>
                 </div>
                 <div class="question" id="question4" style="display: none;">
-                    <p>4. ¿Sabes qué es Solana?</p>
+                    <p>4. ¿Cuál es el planeta más grande del sistema solar?</p>
                     <label>
-                        <input type="radio" name="q4" value="a"> a) Sí
+                        <input type="radio" name="q4" value="a"> a) Marte
                     </label>
                     <label>
-                        <input type="radio" name="q4" value="b"> b) No
+                        <input type="radio" name="q4" value="b"> b) Júpiter
                     </label>
                     <label>
-                        <input type="radio" name="q4" value="c"> c) Más o menos
+                        <input type="radio" name="q4" value="c"> c) Venus
                     </label>
                 </div>
                 <div class="question" id="question5" style="display: none;">
-                    <p>5. ¿Sabes el valor de una Criptomoneda?</p>
+                    <p>5. ¿Quién pintó la "Mona Lisa"?</p>
                     <label>
-                        <input type="radio" name="q5" value="a"> a) Muy alto su valor
+                        <input type="radio" name="q5" value="a"> a) Vincent van Gogh
                     </label>
                     <label>
-                        <input type="radio" name="q5" value="b"> b) Muy bajo su valor
+                        <input type="radio" name="q5" value="b"> b) Leonardo da Vinci
                     </label>
                     <label>
-                        <input type="radio" name="q5" value="c"> c) Valor promedio
+                        <input type="radio" name="q5" value="c"> c) Pablo Picasso
                     </label>
                 </div>
                 <button type="button" id="next-button" onclick="showNextQuestion()" class="quiz-button">Siguiente</button>
                 <button type="button" id="prev-button" style="display: none;" onclick="showPrevQuestion()" class="quiz-button">Regresar</button>
-                <a href="finalizarencuesta.html" id="finish-button" style="display: none;" class="quiz-button">Finalizar</a> 
+                <button type="button" id="finish-button" style="display: none;" onclick="finishQuiz()" class="quiz-button">Finalizar</button>
             </form>
         </div>
     </div>
@@ -84,6 +84,13 @@
         let currentQuestion = 1;
 
         function showNextQuestion() {
+            // Validar que se haya seleccionado una respuesta antes de avanzar
+            const selectedOption = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
+            if (!selectedOption) {
+                alert("Por favor, selecciona una respuesta antes de continuar.");
+                return;
+            }
+
             document.getElementById(`question${currentQuestion}`).style.display = "none";
             currentQuestion++;
             if (currentQuestion <= 5) {
@@ -111,6 +118,20 @@
             if (currentQuestion === 1) {
                 document.getElementById("prev-button").style.display = "none";
             }
+        }
+
+        function finishQuiz() {
+            // Validar que todas las preguntas se hayan contestado
+            for (let i = 1; i <= 5; i++) {
+                const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                if (!selectedOption) {
+                    alert("Por favor, contesta todas las preguntas antes de finalizar.");
+                    return;
+                }
+            }
+            // Aquí puedes agregar la lógica para finalizar el cuestionario
+            // Redireccionar a la página de "finalizarencuesta.html" u otra acción
+            alert("Cuestionario completado. Redirigiendo...");
         }
     </script>
 </body>
