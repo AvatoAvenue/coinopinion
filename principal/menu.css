@@ -1,6 +1,8 @@
-/* Estilos para el menú de navegación */
+/* Estilos para el menú de navegación con fondo */
 nav {
-    background-color: #333;
+    background-color: #12A088;
+    background-image: url('images/fondogreen.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover;
     color: #fff;
     padding: 10px;
 }
@@ -24,16 +26,16 @@ nav ul li a {
 
 /* Estilos para el botón de la billetera */
 .wallet-button {
-    background-color: #ccc;
+    background-color: #12A088;
     border: none;
-    color: #333;
+    color: #fff;
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .wallet-button:hover {
-    background-color: #999;
+    background-color: #0C7A68;
     color: #fff;
 }
 
@@ -55,7 +57,7 @@ nav ul li a {
 }
 
 .dropdown-menu a {
-       position: relative;
+    position: relative;
     display: inline-block;
     margin-left: -20px;
 }
@@ -70,7 +72,7 @@ nav ul li a {
 
 /* Additional styles */
 nav ul li:hover {
-    background-color: #555;
+    background-color: #0C7A68;
 }
 
 nav ul li a:hover {
@@ -85,7 +87,7 @@ nav ul li a:hover {
     display: block;
     width: 100%;
     padding: 20px;
-    background-color: #3498db;
+    background-color: #12A088;
     color: #fff;
     font-size: 18px;
     border: none;
@@ -94,6 +96,6 @@ nav ul li a:hover {
 }
 
 .seleccionar-encuesta-button:hover {
-    background-color: #f75a00;
+    background-color: #0C7A68;
     transform: scale(2);
 }
