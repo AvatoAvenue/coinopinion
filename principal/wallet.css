@@ -133,7 +133,7 @@
             margin: 10px;   
             width: 380px;
             height: 230px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            border: 5px solid rgba(255, 255, 255, 0.1);
             background: rgba(255, 255, 255, 0.4);
             border-radius: 10px;
             z-index: 1;
