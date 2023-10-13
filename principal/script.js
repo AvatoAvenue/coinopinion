@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     walletButton.addEventListener("click", function () {
         // Redirigir a la página de la cartera
-        window.location.href = "cartera.html";
+        window.location.href = "wallet.html";
     });
 });
 
