@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     background: url("images/fondogreen.jpg") no-repeat top;
-    background-size: contain;
-    background-color: #f0f0f0;
+    background-size: cover;
+    background-color: rgba(240, 240, 240, 0.9); /* Fondo semi-transparente */
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -10,6 +10,75 @@ body {
     align-items: center;
     height: 200vh;
     position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    width: 100%;
+}
+
+.header .logo h1 {
+    margin: 0;
+}
+
+.wallet-button {
+    background-color: #12A088;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.user-profile .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.user-profile .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    display: none;
+}
+
+.user-profile .dropdown-menu a {
+    display: block;
+    padding: 4px 8px;
+    text-decoration: none;
+    color: #333;
+}
+
+.user-profile .dropdown-menu a:hover {
+    background-color: #f2f2f2;
+}
+
+.user-profile .dropdown input[type="checkbox"]:checked + .dropdown-menu {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
 }
 
 .container {
@@ -21,15 +90,6 @@ body {
     align-items: flex-start;
     margin: 0 auto;
     padding: 20px;
-}
-
-.wallet-button {
-    background-color: #12A088;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 10px;
 }
 
 .user-container {
@@ -52,6 +112,7 @@ body {
     border-radius: 5px;
     margin-top: 5px;
 }
+
 /* Estilo para los botones */
 .quiz-button {
     background-color: #888;
@@ -76,11 +137,4 @@ body {
 #prev-button {
     display: inline-block; /* Hace que el botón "Regresar" esté en la misma línea que "Siguiente" */
     float: right; /* Alinea "Regresar" a la derecha */
-}
-
-
-
-.quiz-button:hover {
-    background-color: #aaa; /* Cambio de color al pasar el mouse */
-    cursor: pointer;
 }

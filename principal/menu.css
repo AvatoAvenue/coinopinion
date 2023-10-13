@@ -68,3 +68,16 @@ nav ul li a {
 .dropdown input[type="checkbox"]:checked + .dropdown-menu {
     display: block;
 }
+
+/* Additional styles */
+nav ul li:hover {
+    background-color: #555;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
