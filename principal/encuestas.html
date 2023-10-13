@@ -7,33 +7,6 @@
     <title>Cuestionario de Finanzas</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <h1>Encuestas</h1>
-        </div>
-        <div class="user-profile">
-            <button class="wallet-button" id="wallet-button">Wallet</button>
-            <div class="dropdown">
-                <input type="checkbox" id="dropdown-toggle">
-                <label for="dropdown-toggle" class="profile-button">
-                    <img src="profile-picture.jpg" alt="Profile Picture">
-                </label>
-                <div class="dropdown-menu">
-                    <a href="#">Usuario</a>
-                    <a href="#">Ajustes</a>
-                    <a href="#">Cartera</a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Encuesta 1</a></li>
-            <li><a href="#">Encuesta 2</a></li>
-            <li><a href="#">Encuesta 3</a></li>
-            <li><a href="#">Encuesta 4</a></li>
-        </ul>
-    </nav>
     <div class="container">
         <div class="user-container">
             <h2>Bienvenido, Alonso Iker</h2>
@@ -111,6 +84,13 @@
         let currentQuestion = 1;
 
         function showNextQuestion() {
+            // Validar que se haya seleccionado una respuesta antes de avanzar
+            const selectedOption = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
+            if (!selectedOption) {
+                alert("Por favor, selecciona una respuesta antes de continuar.");
+                return;
+            }
+
             document.getElementById(`question${currentQuestion}`).style.display = "none";
             currentQuestion++;
             if (currentQuestion <= 5) {
@@ -138,6 +118,19 @@
             if (currentQuestion === 1) {
                 document.getElementById("prev-button").style.display = "none";
             }
+        }
+
+        function finishQuiz() {
+            // Validar que todas las preguntas se hayan contestado
+            for (let i = 1; i <= 5; i++) {
+                const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                if (!selectedOption) {
+                    alert("Por favor, contesta todas las preguntas antes de finalizar.");
+                    return;
+                }
+            }
+
+            alert("Cuestionario completado. Redirigiendo...");
         }
     </script>
 </body>

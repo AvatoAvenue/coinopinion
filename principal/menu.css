@@ -46,19 +46,18 @@ nav ul li a {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: -10;
     background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 8px;
+    border-radius: 20px;
+    padding: 20px;
     display: none;
 }
 
 .dropdown-menu a {
-    display: block;
-    padding: 4px 8px;
-    text-decoration: none;
-    color: #333;
+       position: relative;
+    display: inline-block;
+    margin-left: -20px;
 }
 
 .dropdown-menu a:hover {
@@ -80,4 +79,21 @@ nav ul li a:hover {
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+.seleccionar-encuesta-button {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.seleccionar-encuesta-button:hover {
+    background-color: #f75a00;
+    transform: scale(2);
 }
