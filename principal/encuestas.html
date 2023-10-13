@@ -9,9 +9,16 @@
 <body>
     <div class="container">
         <div class="user-container">
+            <!-- Agregamos el nombre "Coin-Opinion" en la pantalla principal -->
+            <h1 class="coin-opinion-header">Coin-Opinion</h1>
+            <link rel="stylesheet" type="text/css" href="encuestas.css">
             <h2>Bienvenido, Alonso Iker</h2>
             <img src="images/usuario.png" alt="Ícono de Usuario" style="max-width: 100px;">
             <h3>Cuestionario de Finanzas</h3>
+            <!-- Agregamos una barra de progreso -->
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
             <form id="quiz-form">
                 <div class="question" id="question1">
                     <p>1. ¿Cuál es la criptomoneda más antigua?</p>
@@ -103,6 +110,10 @@
             if (currentQuestion > 1) {
                 document.getElementById("prev-button").style.display = "block";
             }
+
+            // Actualizar la barra de progreso
+            const progress = (currentQuestion / 5) * 100;
+            document.querySelector(".progress-bar").style.width = progress + "%";
         }
 
         function showPrevQuestion() {
@@ -118,6 +129,10 @@
             if (currentQuestion === 1) {
                 document.getElementById("prev-button").style.display = "none";
             }
+
+            // Actualizar la barra de progreso
+            const progress = (currentQuestion / 5) * 100;
+            document.querySelector(".progress-bar").style.width = progress + "%";
         }
 
         function finishQuiz() {
