@@ -9,20 +9,13 @@
     <title>Bienvenido a Coin-Opinion</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <img src="images/logo.jpeg" alt="Logo de Coin-Opinion">
-            </div>
-            <h1>Bienvenido a Coin-Opinion</h1>
-        </header>
-    </div>
-    <div class="image-slider">
-        <div><img src="images/Carrusel.jpeg" alt="Imagen 1"></div>
-        <div><img src="images/logosolana.jpg" alt="Imagen 2"></div>
-        <div><img src="images/Solana-Cryptocurrency.jpg" alt="Imagen 3"></div>
-        <!-- Puedes agregar más imágenes siguiendo el mismo formato -->
-    </div>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="Logo de Coin-Opinion">
+        </div>
+        <h1>Bienvenido a Coin-Opinion</h1>
+    </header>
+
     <div class="container">
         <section class="about">
             <h2>¿Qué es Coin-Opinion?</h2>
@@ -39,6 +32,14 @@
             <a href="registro.html">Registrarse</a>
         </section>
     </div>
+
+    <div class="image-slider">
+        <div><img src="images/Carrusel.jpeg" alt="Imagen 1"></div>
+        <div><img src="images/logosolana.jpg" alt="Imagen 2"></div>
+        <div><img src="images/Solana-Cryptocurrency.jpg" alt="Imagen 3"></div>
+        <!-- Puedes agregar más imágenes siguiendo el mismo formato -->
+    </div>
+
     <footer>
         &copy; 2023 Coin-Opinion
     </footer>
@@ -48,12 +49,12 @@
     <script>
         $(document).ready(function(){
             $('.image-slider').slick({
-                autoplay: true, // Reproducción automática
-                autoplaySpeed: 3000, // Velocidad de reproducción automática en milisegundos (3 segundos en este caso)
-                arrows: true, // Flechas de navegación habilitadas
-                dots: true, // Indicadores de navegación
-                prevArrow: '<button type="button" class="slick-prev">Anterior</button>', // Flecha anterior personalizada
-                nextArrow: '<button type="button" class="slick-next">Siguiente</button>' // Flecha siguiente personalizada
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: true,
+                dots: true,
+                prevArrow: '<button type="button" class="slick-prev">Anterior</button>',
+                nextArrow: '<button type="button" class="slick-next">Siguiente</button>'
             });
         });
     </script>
