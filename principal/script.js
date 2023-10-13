@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Aquí puedes agregar lógica de autenticación, como verificar credenciales en un servidor.
         // Simularemos el inicio de sesión exitoso.
-        if (username === "usuario" && password === "contraseña") {
+        if (username === "usuario" && password === "123") {
             // Redirigir a la página del usuario
             window.location.href = "usuario.html";
         } else {
