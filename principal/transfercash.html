@@ -24,7 +24,6 @@
         <input
             type="text"
             id="receiver"
-            onchange="handleReceiverChange(this)"
         />
     </div>
     <div class="Cantidad">
@@ -32,15 +31,14 @@
         <input
             type="number"
             id="quantity_sol"
-            onchange="handleAmountChange(this)"
         />
     </div>
 
     <button
         id="button_send"
-        onclick="handleSubmit()"
     >Enviar</button>
     
+    <script src="transfercash.js"></script>
 </body>
-  <script src="transfercash.js"></script>
 
+</html>
