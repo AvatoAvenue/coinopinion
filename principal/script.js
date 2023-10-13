@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Simularemos el inicio de sesión exitoso.
         if (username === "usuario" && password === "123") {
             // Redirigir a la página del usuario
-            window.location.href = "usuario.html";
+            window.location.href = "menu.html";
         } else {
             alert("Inicio de sesión fallido. Verifica tus credenciales.");
         }

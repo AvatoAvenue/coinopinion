@@ -1,4 +1,5 @@
 import toast, { Toaster } from "react-hot-toast";
+
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import {
@@ -15,6 +16,27 @@ import { useStorageUpload } from "@thirdweb-dev/react";
 import axios from "axios";
 
 const SOLANA_NETWORK = "devnet";
+const web3 = require('@solana/web3.js');
+const connection = new web3.Connection(web3.clusterApiUrl('devnet')); // Change 'devnet' to the desired network
+const publicKey = web3.PublicKey.default;
+
+const transaction = new web3.Transaction().add(
+    web3.SystemProgram.transfer({
+      fromPubkey: publicKey, // Sender's public key
+      toPubkey: 'RECIPIENT_PUBLIC_KEY', // Recipient's public key
+      lamports: 1000000, // Amount to send in lamports
+    })
+  );
+  
+  // Sign the transaction using Phantom wallet
+  web3.sendAndConfirmTransaction(connection, transaction, [publicKey])
+    .then((signature) => {
+      console.log('Transaction confirmed with signature:', signature);
+    })
+    .catch((error) => {
+      console.error('Transaction failed:', error);
+    });
+  
 
 const Home = () => {
     const [publicKey, setPublicKey] = useState(null);
