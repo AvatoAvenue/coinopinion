@@ -15,7 +15,7 @@
     .header
     {
         user-select: none;
-        display: flex;
+        display:flex;
         justify-content: space-between;
         align-items: center;
         background-color: #ffff; 
@@ -55,11 +55,12 @@
     }
     .header #agregarTarjeta
     {
+      justify-content:center;
         background-color: #12A088;
         color: #fff;
         font-size: 18px;
         padding: 10px 20px;
-        margin: 0 0%;
+        margin: 0 -7%;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -74,7 +75,7 @@
         color: #fff;
         font-size: 18px;
         padding: 10px 20px;
-        margin: 0 -30%;
+        margin: 0 -25%;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -90,7 +91,7 @@
         color: #fff;
         font-size: 18px;
         padding: 10px 20px;
-        margin: 0 20px;
+        margin: 0 15px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
