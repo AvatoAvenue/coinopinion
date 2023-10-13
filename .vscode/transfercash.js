@@ -1,4 +1,4 @@
-import toast, { Toaster } from './node_modules/react-hot-toast';
+import toast, { Toaster } from './node_modules/react-hot-toast/';
 import { 
     Connection,
     SystemProgram,
