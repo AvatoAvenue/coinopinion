@@ -1,6 +1,8 @@
-/* Estilos para el menú de navegación */
+/* Estilos para el menú de navegación con fondo */
 nav {
     background-color: #12A088;
+    background-image: url('images/fondogreen.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover;
     color: #fff;
     padding: 10px;
 }
