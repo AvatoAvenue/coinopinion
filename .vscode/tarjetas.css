@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.wallet {
+    margin-right: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.crypto-card,
+.gift-card {
+    width: 200px;
+    height: 250px;
+    background-color: #3498db;
+    border: 1px solid #2980b9;
+    margin: 10px;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.crypto-card-content,
+.gift-card-content {
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.gift-card img {
+    width: 80%;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.gift-card:hover {
+    transform: scale(1.1);
+}

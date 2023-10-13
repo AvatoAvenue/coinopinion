@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/4552604-globe-internet-sphere-web_121385.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="transfercash.css">
+    <title>Transferencia</title>
+</head>
+
+<div class="header">
+    <img src="images\logo.jpeg" alt="logo">
+    <h1>Transferencia</h1>
+    <button id="Menu">Inicio</button>
+    <button id="conectar">conectar</button>
+  </div>
+<body>
+    <div class="saldocontainer">
+        <div id="saldo">
+            Saldo de soles actual
+        </div>
+        <p id="balance"></p>
+    </div>
+    <div class="Destino">
+        <p>Destinatario:</p>
+        <input
+            type="text"
+            id="receiver"
+        />
+    </div>
+    <div class="Cantidad">
+        <p>Cantidad de sol:</p>
+        <input
+            type="number"
+            id="amount"
+        />
+    </div>
+
+    <button
+        id="button_send"
+    >Enviar</button>
+    <script type="module" src="transfercash.js"></script>
+</body>
+
+</html>

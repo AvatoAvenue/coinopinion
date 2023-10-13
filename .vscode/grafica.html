@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="grafica.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="calculo-vectorial.js"></script> <!-- Archivo JavaScript con las funciones de suma de vectores y producto cruz -->
+    <title>Rastreo de Solana (SOL)</title>
+</head>
+<body>
+    <h1>COMPORTAMIENTO DE LA CRYPTO SOLANA </h1>
+    <br>
+    <div class="chart">
+        <canvas id="cryptoChart"></canvas>
+    </div>
+    <script src="grafico.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <br>
+  <canvas id="crypto-chart"></canvas>
+  <script src="crypto-chart.js"></script>
+<br><br><br><br>
+  <canvas id="crypto-pie-chart"></canvas>
+
+  <div id="resultadoSuma"></div> <!-- Elemento HTML para mostrar el resultado de la suma -->
+  <div id="resultadoProductoCruz"></div> <!-- Elemento HTML para mostrar el resultado del producto cruz -->
+
+  <script>
+    // Ejemplo de uso de las funciones
+    const vector1 = [1, 2, 3];
+    const vector2 = [4, 5, 6];
+
+    try {
+      const resultadoSuma = sumaVectores(vector1, vector2);
+      document.getElementById('resultadoSuma').innerText = 'La suma de los vectores es: ' + resultadoSuma;
+
+      const resultadoProductoCruz = productoCruz(vector1, vector2);
+      document.getElementById('resultadoProductoCruz').innerText = 'El producto cruz de los vectores es: ' + resultadoProductoCruz;
+    } catch (error) {
+      console.error('Error:', error.message);
+    }
+  </script>
+  
+</body>
+</html>
