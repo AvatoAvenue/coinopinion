@@ -1,8 +1,6 @@
-/* Estilos para el menú de navegación con fondo */
+/* Estilos para el menú de navegación */
 nav {
-    background-color: #12A088;
-    background-image: url('images/fondogreen.jpg'); /* Ruta de tu imagen de fondo */
-    background-size: cover;
+    background-color: #333;
     color: #fff;
     padding: 10px;
 }
@@ -26,16 +24,16 @@ nav ul li a {
 
 /* Estilos para el botón de la billetera */
 .wallet-button {
-    background-color: #12A088;
+    background-color: #ccc;
     border: none;
-    color: #fff;
+    color: #333;
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .wallet-button:hover {
-    background-color: #0C7A68;
+    background-color: #999;
     color: #fff;
 }
 
@@ -57,7 +55,7 @@ nav ul li a {
 }
 
 .dropdown-menu a {
-    position: relative;
+       position: relative;
     display: inline-block;
     margin-left: -20px;
 }
@@ -72,7 +70,7 @@ nav ul li a {
 
 /* Additional styles */
 nav ul li:hover {
-    background-color: #0C7A68;
+    background-color: #555;
 }
 
 nav ul li a:hover {
@@ -87,7 +85,7 @@ nav ul li a:hover {
     display: block;
     width: 100%;
     padding: 20px;
-    background-color: #12A088;
+    background-color: #3498db;
     color: #fff;
     font-size: 18px;
     border: none;
@@ -96,6 +94,32 @@ nav ul li a:hover {
 }
 
 .seleccionar-encuesta-button:hover {
-    background-color: #0C7A68;
+    background-color: #f75a00;
     transform: scale(2);
+}
+
+.header
+{
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffff; 
+    height: 90px; 
+    width: 100%;
+    margin-bottom: 2%;
+}
+.header img 
+{
+    width: 100px;
+    height: auto;
+    margin-right: 5%;
+    margin-left: 0%;
+}
+.header h1
+{
+    color: #12A088;
+    justify-content: left;
+    font-size: 50px;
+    margin-left: -55%;
 }
