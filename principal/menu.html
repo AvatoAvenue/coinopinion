@@ -94,6 +94,15 @@
             padding: 10px;
             text-align: center;
         }
+        
+        /* Custom styles */
+        .header .profile-button {
+            margin-right: 10px; /* Add margin-right to move the button to the left */
+        }
+        
+        .header .wallet-button {
+            margin-right: 10px; /* Add margin-right to move the button to the left */
+        }
     </style>
     <title>Dashboard</title>
 </head>
@@ -102,7 +111,7 @@
         <div class="header">
             <h1>Encuestas</h1>
             <div>
-                <button class="wallet-button">Wallet</button>
+                <button id="conectar" class="wallet-button">Wallet</button>
                 <div class="dropdown">
                     <input type="checkbox" id="dropdown-toggle">
                     <label for="dropdown-toggle" class="profile-button">
@@ -126,25 +135,11 @@
         </nav>
     </header>
     <main>
-        <div class="slider-container">
-            <label for="slider1">Encuesta 1:</label>
-            <input type="range" id="slider1" min="0" max="100" value="50">
-        </div>
-        <div class="slider-container">
-            <label for="slider2">Encuesta 2:</label>
-            <input type="range" id="slider2" min="0" max="100" value="50">
-        </div>
-        <div class="slider-container">
-            <label for="slider3">Encuesta 3:</label>
-            <input type="range" id="slider3" min="0" max="100" value="50">
-        </div>
-        <div class="slider-container">
-            <label for="slider4">Encuesta 4:</label>
-            <input type="range" id="slider4" min="0" max="100" value="50">
-        </div>
+        <!-- Contenido del dashboard -->
     </main>
     <footer>
         <!-- Pie de página -->
     </footer>
+    <script src="menu.js"></script>
 </body>
 </html>
