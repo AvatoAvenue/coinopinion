@@ -9,19 +9,16 @@ Coin-Opinion is an innovative application designed to provide businesses with va
 
 - Real-time cryptocurrency data
 - Trend analysis and predictions
-- Customizable dashboards
-- Comprehensive reports
 - User-friendly interface
 
 ## Getting Started
 
-To get started with Coin-Opinion, you can [visit our website](https://www.coinopinion.com) or [check out our documentation](https://docs.coinopinion.com) for detailed instructions.
+To get started with CoinOpinion, you can [visit our website](https://coinopinion.000webhostapp.com/coinopinion/)
 
 ## Contact Us
 
 If you have any questions, feedback, or inquiries, please don't hesitate to reach out to us:
 
-- Email: contact@coinopinion.com
-- Twitter: [@CoinOpinionHQ](https://twitter.com/CoinOpinionHQ)
+- Twitter: [@CoinOpinion](https://twitter.com/coinopinion_)
 
 We look forward to helping you make informed decisions in the world of cryptocurrencies.
