@@ -11,35 +11,37 @@
 <body>
     <h1>COMPORTAMIENTO DE LA CRYPTO SOLANA </h1>
     <br>
-    <div class="chart">
-        <canvas id="cryptoChart"></canvas>
+
+    <!-- Ejemplo de suma de vectores -->
+    <div>
+        <h2>Ejemplo de Suma de Vectores</h2>
+        <p>Vector 1: [1, 2, 3]</p>
+        <p>Vector 2: [4, 5, 6]</p>
+        <div id="resultadoSuma"></div> <!-- Elemento HTML para mostrar el resultado de la suma -->
     </div>
-    <script src="grafico.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <br>
-  <canvas id="crypto-chart"></canvas>
-  <script src="crypto-chart.js"></script>
-<br><br><br><br>
-  <canvas id="crypto-pie-chart"></canvas>
 
-  <div id="resultadoSuma"></div> <!-- Elemento HTML para mostrar el resultado de la suma -->
-  <div id="resultadoProductoCruz"></div> <!-- Elemento HTML para mostrar el resultado del producto cruz -->
+    <!-- Ejemplo de producto cruz de vectores -->
+    <div>
+        <h2>Ejemplo de Producto Cruz de Vectores</h2>
+        <p>Vector 1: [1, 2, 3]</p>
+        <p>Vector 2: [4, 5, 6]</p>
+        <div id="resultadoProductoCruz"></div> <!-- Elemento HTML para mostrar el resultado del producto cruz -->
+    </div>
 
-  <script>
-    // Ejemplo de uso de las funciones
-    const vector1 = [1, 2, 3];
-    const vector2 = [4, 5, 6];
+    <script>
+        // Ejemplo de uso de las funciones
+        const vector1 = [1, 2, 3];
+        const vector2 = [4, 5, 6];
 
-    try {
-      const resultadoSuma = sumaVectores(vector1, vector2);
-      document.getElementById('resultadoSuma').innerText = 'La suma de los vectores es: ' + resultadoSuma;
+        try {
+            const resultadoSuma = sumaVectores(vector1, vector2);
+            document.getElementById('resultadoSuma').innerText = 'La suma de los vectores es: ' + resultadoSuma;
 
-      const resultadoProductoCruz = productoCruz(vector1, vector2);
-      document.getElementById('resultadoProductoCruz').innerText = 'El producto cruz de los vectores es: ' + resultadoProductoCruz;
-    } catch (error) {
-      console.error('Error:', error.message);
-    }
-  </script>
-  
+            const resultadoProductoCruz = productoCruz(vector1, vector2);
+            document.getElementById('resultadoProductoCruz').innerText = 'El producto cruz de los vectores es: ' + resultadoProductoCruz;
+        } catch (error) {
+            console.error('Error:', error.message);
+        }
+    </script>
 </body>
 </html>
